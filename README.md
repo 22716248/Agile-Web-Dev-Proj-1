@@ -6,6 +6,8 @@ Jakub (Kuba) Wysocki #22716248
 James Van Ravestein #22730755  
 Geraldine Chin #22972043  
 
+Possible Libraries:
+https://github.com/michalsnik/aos
 
 Sources:  
 https://www.thoughtco.com/constellations-pictures-gallery-4122769  
