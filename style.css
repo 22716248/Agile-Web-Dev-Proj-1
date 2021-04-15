@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
+}
+
+.nav-bar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+}
+
 body {
   background-color: #1b2631;
   margin: 0% auto; /* remove empty space around content */
