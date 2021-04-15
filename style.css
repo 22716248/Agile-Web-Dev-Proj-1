@@ -1,15 +1,37 @@
-  body {
-    background-color:  #1b2631 ;
-  }
-  
-  h1 {
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-  }
+body {
+  background-color: #1b2631;
+  margin: 0% auto; /* remove empty space around content */
+  -ms-overflow-style: none; /* hides scrollbar, IE & Edge */
+  scrollbar-width: none; /* hides scrollbar Firefox */
+}
+body::-webkit-scrollbar { /* hides scrollbar Chrome */
+  display: none;
+}
 
-  p {
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-  }
+#intro_img { /* big space image at start */
+  width: 100%;
+  height: auto;
+}
+
+.introduction {
+  text-align: center;
+  color:white;
+}
+.centered { /* centered text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
