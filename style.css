@@ -2,10 +2,20 @@ html {
   scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
 }
 
-.nav-bar {
+.nav-bar { /* fixe the nav bar center right on screen */
   position: fixed;
   right: 0;
   top: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav-button { /* turn the hyperlinks into white buttons */
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: 100ms linear;
+}
+.nav-button:hover { /* turn the hyperlinks into white buttons */
+  color: grey;
 }
 
 body {
