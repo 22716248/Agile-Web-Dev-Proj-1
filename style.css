@@ -39,11 +39,21 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   width: 100%;
   height: auto;
 }
-.centered { /* centered text */
+.centered { /* centered text, for intro image */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overview { /* overview image and text*/
+  position: relative;
+}
+.top { /* text on top, for overview images*/
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   text-align: center;
 }
 
@@ -52,12 +62,16 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   width: 50%;
   padding : 0;
 }
+.third { /* constellation third=page containers */
+  float: left;
+  width: 33.33%;
+  padding : 0;
+}
 .constellation:after { /* makes the rest of the content go below the section */
   content: "";
   clear: both;
   display: table;
 }
-
 
 h1 {
   color: rgb(255, 255, 255);
