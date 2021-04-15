@@ -13,3 +13,4 @@ https://en.wikipedia.org/wiki/Constellation
 https://www.thoughtco.com/how-to-find-the-cygnus-constellation-4172706  
 https://www.skyatnightmagazine.com/advice/southern-hemisphere-cheat-sheet/  
 https://en.wikipedia.org/wiki/Urania%27s_Mirror  
+https://in-the-sky.org/data/constellations_list.php  
