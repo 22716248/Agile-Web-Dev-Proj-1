@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
 }
 
-.nav-bar { /* fixe the nav bar center right on screen */
+.nav-bar { /* fix the nav bar center right on screen */
   position: fixed;
   right: 0;
   top: 50%;
@@ -46,8 +46,13 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.overview { /* overview image and text*/
+.introduction { /* overview image and text*/
   position: relative;
+}
+.introduction:after { /* makes the rest of the content go below the section */
+  content: "";
+  clear: both;
+  display: table;
 }
 .top { /* text on top, for overview images*/
   position: absolute;
@@ -56,7 +61,6 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   transform: translate(-50%, 0);
   text-align: center;
 }
-
 .half { /* constellation half-page containers */
   float: left;
   width: 50%;
@@ -71,6 +75,10 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   content: "";
   clear: both;
   display: table;
+}
+.overview {
+  position: relative;
+  text-align: center;
 }
 
 h1 {
