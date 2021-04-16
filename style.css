@@ -30,20 +30,106 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   display: none;
 }
 
-
-#intro-img { /* big space image at start */
+.fading-img {
+  transition: 500ms;
+  height: 100%;
   width: 100%;
-  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#cru-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CRU_001.png");
+}
+#cru-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CRU_000.png");
+}
+#cen-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CEN_001.png");
+}
+#cen-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CEN_000.png");
+}
+#lup-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LUP_001.png");
+}
+#lup-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LUP_000.png");
+}
+#sgr-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SGR_001.png");
+}
+#sgr-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SGR_000.png");
+}
+#sco-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SCO_001.png");
+}
+#sco-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SCO_000.png");
+}
+#car-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CAR_001.png");
+}
+#car-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CAR_000.png");
+}
+#vel-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VEL_001.png");
+}
+#vel-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VEL_000.png");
+}
+#pup-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_PUP_001.png");
+}
+#pup-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_PUP_000.png");
+}
+#vol-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VOL_001.png");
+}
+#vol-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VOL_000.png");
+}
+#cma-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CMA_001.png");
+}
+#cma-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CMA_000.png");
+}
+#lep-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LEP_001.png");
+}
+#lep-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LEP_000.png");
+}
+#ori-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_ORI_001.png");
+}
+#ori-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_ORI_000.png");
+}
+#tau-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_TAU_001.png");
+}
+#tau-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_TAU_000.png");
+}
+#intro-img { /* big space image at start, cropped */
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
 }
 #overview-img { /* overview of the sky */
   width: 100%;
-  height: auto;
+  height: 120px;
+  object-fit: cover;
 }
 .centered { /* centered text, for intro image */
   position: absolute;
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 .introduction { /* overview image and text*/
@@ -65,6 +151,7 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   float: left;
   width: 50%;
   padding : 0;
+  height: 20em;
 }
 .third { /* constellation third=page containers */
   float: left;
@@ -79,12 +166,19 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 .overview {
   position: relative;
   text-align: center;
+  height: 120px;
+}
+.quiz {
+  position: relative;
+  height: auto;
 }
 
 h1 {
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
+  letter-spacing: 0.5em;
+  top: 50%;
 }
 p {
   color: rgb(255, 255, 255);
