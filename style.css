@@ -174,14 +174,22 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   letter-spacing: 0.5em;
-  top: 50%;
+  font-size: 1.8em;
 }
-p {
-  color: rgb(255, 255, 255);
+h2 {
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
+  letter-spacing: 0.2em;
+  font-size: 1.4em
+}
+p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  font-size: 1em;
 }
