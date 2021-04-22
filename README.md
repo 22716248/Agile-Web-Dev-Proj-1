@@ -19,6 +19,8 @@ Adam Chen #22988367
 * Technologies required, including virtual environments and flask
 * Improving user experience: move most text to optional hidden sections, have key info visible initially
 * Crediting image sources
+* Fix CSS image spam with JavaScript
+* Fix nav bar vanishing behind some images
 * This week: incorporate required technologies, general page improvements
 
 **Possible Libraries:**  
