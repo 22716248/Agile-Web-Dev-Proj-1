@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-color: #1b2631;
+  background-color: #0a0d1b;
   margin: 0% auto; /* remove empty space around content */
   -ms-overflow-style: none; /* hides scrollbar, IE & Edge */
   scrollbar-width: none; /* hides scrollbar Firefox */
@@ -36,7 +36,9 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.48;
 }
+
 #cru-img {
   background-image: url("https://in-the-sky.org/images/constellations/con_CRU_001.png");
 }
