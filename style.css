@@ -19,6 +19,8 @@ html {
 }
 
 body {
+  background: rgb(28,29,47);
+  background: linear-gradient(180deg, rgba(28,29,47,1) 0%, rgba(14,14,52,1) 35%, rgba(50,60,71,1) 94%, rgba(94,94,94,1) 100%);
   background-color: #0a0d1b;
   margin: 0% auto; /* remove empty space around content */
   -ms-overflow-style: none; /* hides scrollbar, IE & Edge */
