@@ -10,7 +10,7 @@ Adam Chen #22988367
 ![20210414_184446](https://user-images.githubusercontent.com/54944385/115646677-3a43c680-a355-11eb-864e-f98daa3cf477.jpg)  
 [In image: Page layout sketch, list of page sections required and quiz ideas. Page sections listed: 1. Intro, 2. Sky overview, 3. Constellation overview, 4. Quiz, 5. Page navigation/progress bar]
 * Project ideas & requirements
-* Page minimalist aesthetic and layout, content structure, user experience
+* Page minimalist aesthetic and layout, content structure, user experience, audio (music/ sound effects)
 * Gamified quiz experience: connect-the dots or finding constellation in image
 * This week: complete page mock-up with introduction, overview, constellation, navigation and quiz sections
 
