@@ -127,16 +127,7 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 #tau-img:hover {
   background-image: url("https://in-the-sky.org/images/constellations/con_TAU_000.png");
 }
-#intro-img { /* big space image at start, cropped */
-  width: 100%;
-  height: 720px;
-  object-fit: cover;
-}
-#overview-img { /* overview of the sky */
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-}
+
 .centered { /* centered text, for intro image */
   position: absolute;
   transform: translate(-50%, -50%);
@@ -165,11 +156,7 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
   padding : 0;
   height: 20em;
 }
-.third { /* constellation third=page containers */
-  float: left;
-  width: 33.33%;
-  padding : 0;
-}
+
 .constellation:after { /* makes the rest of the content go below the section */
   content: "";
   clear: both;
