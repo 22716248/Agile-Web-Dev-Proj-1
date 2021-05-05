@@ -23,6 +23,38 @@ Adam Chen #22988367
 * Fix nav bar vanishing behind some images
 * This week: incorporate required technologies, general page improvements
 
+**Week 3/5 Meeting:**  
+* Flask and databases
+
+**Week 4/5 Meeting:**  
+* Flask remodel, database integration
+* Remodel page layout, css and info
+* authentication
+* testing: unit tests and selenium
+* complete test on another page
+
+**Installation**
+```
+$ sudo apt install python3
+$ sudo apt install python3-pip
+$ sudo apt-get install python3-setuptools
+$ sudo apt install python3-flask
+$ git clone https://github.com/22716248/Agile-Web-Dev-Proj-1
+$ pip3 install -r requirements.txt
+
+$ export FLASK_APP=constellation.py (not yet implemented, just use python app.py/__init__.py for now)
+```
+
+**Execution**
+```
+$ flask run
+```
+
+**Executing testing**
+```
+$ python3 -W ignore tests.py
+```
+
 **Possible Libraries:**  
 https://github.com/michalsnik/aos  
 
