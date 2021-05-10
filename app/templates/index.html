@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!--Custom CSS designed by group-->
+    <!--use below for testing html w/o flask-->
+    <link rel="stylesheet" href="style.css">
+    <!--use below for flask-->
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
     <!-- jQuery library -->
@@ -19,6 +22,9 @@
 </head>
 
 <body>
+    <div style="font-size:larger">
+        <a href="/login">Login</a>
+    </div>
     <div class="nav-bar">
         <table>
             <tr><td><a href="#intro" class="nav-button">&#11044;</a></td></tr>
