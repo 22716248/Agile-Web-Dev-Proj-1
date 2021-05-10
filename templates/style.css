@@ -43,10 +43,11 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 }
 
 .page-title {
-  height: 50vh;
+  height: 100vh;
   text-align: center;
-  padding: 25% 5%;
+  padding: 50vh 0%;
 }
+
 
 .centered { /* centered text, for intro image */
   position: absolute;
