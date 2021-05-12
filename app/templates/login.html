@@ -11,12 +11,15 @@
             <p> <a href="/">Click here to go back to start</a></p>
             <form action="" method="post">
                 <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}">
+                {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
                 <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}">
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
                 <input type="submit" value="Login">
             </form>
-            {% if error %}
-                <p class="error"> Error!!! It is: {{ error }}</p>
-            {% endif %}
         </div>
     </body>
 </html>
