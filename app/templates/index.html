@@ -23,7 +23,11 @@
 
 <body>
     <div style="font-size:larger">
+        {% if current_user.is_anonymous %}
         <a href="/login">Login</a>
+        {% else %}
+        <a href="/logout">logout</a>
+        {% endif %}
     </div>
     <div class="nav-bar">
         <table>
