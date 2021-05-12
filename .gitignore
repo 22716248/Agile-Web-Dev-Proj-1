@@ -1,4 +1,10 @@
 venv/
+venv
+.venv
+/venv
+/venv/
+/.venv/
+.venv/
 .vscode
 ~$nstellations - Website Content.docx
 __pycache__
