@@ -33,6 +33,14 @@ Adam Chen #22988367
 * testing: unit tests and selenium
 * complete test on another page
 
+**Week 5/5 Meeting:**  
+* Priority: Finish quiz
+* Priority: Finish database
+* Priority: Finish testing suite
+* Cleaning up page design (CSS and content structure)
+* Password validation
+* Fancy quiz questions: e.g. connect the dots
+
 **Installation**
 ```
 $ sudo apt install python3
@@ -41,8 +49,6 @@ $ sudo apt-get install python3-setuptools
 $ sudo apt install python3-flask
 $ git clone https://github.com/22716248/Agile-Web-Dev-Proj-1
 $ pip3 install -r requirements.txt
-
-$ export FLASK_APP=constellation.py (not yet implemented, just use python app.py/__init__.py for now)
 ```
 
 **Execution**
