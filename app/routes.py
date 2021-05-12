@@ -8,6 +8,10 @@ from app.models import User
 def index():
 	return render_template('index.html')
 
+@app.route('/quiz')
+def quiz():
+	return render_template('quiz.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
