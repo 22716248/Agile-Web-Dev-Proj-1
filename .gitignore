@@ -1,7 +1,13 @@
+venv/
 venv
 .venv
+/venv
+/venv/
+/.venv/
+.venv/
 .vscode
 ~$nstellations - Website Content.docx
+<<<<<<< HEAD
 _pycache_
 app/__pycache__/routes.cpython-39.pyc
 app/__pycache__/models.cpython-39.pyc
@@ -16,3 +22,6 @@ app/__pycache__/__init__.cpython-39.pyc
 __pycache__/project.cpython-39.pyc
 __pycache__/config.cpython-39.pyc
 *.pyc
+=======
+__pycache__
+>>>>>>> 025b79d4af3109ab5fb0a2a97a49724d46de8423
