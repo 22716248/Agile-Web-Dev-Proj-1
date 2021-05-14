@@ -36,46 +36,16 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 .page-title {
   height: 100vh;
   text-align: center;
-  padding: 50vh 0%;
+  padding: 40vh 0%;
 }
 
 
-.centered { /* centered text, for intro image */
-  position: absolute;
-  transform: translate(-50%, -50%);
-  /* top: 50%; */
-  left: 50%;
+.centered {
   text-align: center;
-}
-
-.introduction { /* overview image and text*/
-  position: relative;
-}
-
-.introduction:after { /* makes the rest of the content go below the section */
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-.constellation:after { /* makes the rest of the content go below the section */
-  content: "";
-  clear: both;
-  display: table;
-}
-.overview {
-  position: relative;
-  text-align: center;
-  height: 120px;
-}
-.quiz {
-  position: relative;
-  height: auto;
 }
 
 h1 {
-  color: white;
+  color: hotpink;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   letter-spacing: 0.5em;
@@ -87,11 +57,107 @@ h2 {
   margin: auto;
   letter-spacing: 0.2em;
   font-size: 3em;
-  padding: 10%;
+  padding: 5%;
 }
 p {
   color: lightgrey;
+  width: 80%;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
-  font-size: 2.5em;
+  font-size: 3em;
 }
+
+.buttons {
+  background-color: lightsteelblue;
+  border: none;
+  border-radius: 10px;
+  color: navy;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+.constellation-image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.constellation-text{
+  margin-top: 10px;
+}
+
+.fading-img {
+  transition: 500ms;
+  height: 50vh;
+  width: 60%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  margin-top: 5%;
+}
+
+
+#aqr-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_AQR_001.png");
+}
+#aqr-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_AQR_000.png");
+}
+#cru-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CRU_001.png");
+}
+#cru-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CRU_000.png");
+}
+#cen-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CEN_001.png");
+}
+#cen-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CEN_000.png");
+}
+#lup-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LUP_001.png");
+}
+#lup-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LUP_000.png");
+}
+#sgr-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SGR_001.png");
+}
+#sgr-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SGR_000.png");
+}
+#sco-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SCO_001.png");
+}
+#sco-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SCO_000.png");
+}
+#car-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CAR_001.png");
+}
+#car-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CAR_000.png");
+}
+#vel-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VEL_001.png");
+}
+#vel-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VEL_000.png");
+}
+#ori-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_ORI_001.png");
+}
+#ori-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_ORI_000.png");
+}
+
+
