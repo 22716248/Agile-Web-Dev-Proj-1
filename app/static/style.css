@@ -36,7 +36,7 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 .page-title {
   height: 100vh;
   text-align: center;
-  padding: 50vh 0%;
+  padding: 40vh 0%;
 }
 
 
@@ -75,7 +75,7 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 }
 
 h1 {
-  color: white;
+  color: pink;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   letter-spacing: 0.5em;
@@ -95,3 +95,58 @@ p {
   margin: auto;
   font-size: 2.5em;
 }
+
+.fading-img {
+  transition: 500ms;
+  height: 50vh;
+  width: 40em;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.48;
+  margin-top: 30px;
+}
+
+#cru-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CRU_001.png");
+}
+#cru-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CRU_000.png");
+}
+#cen-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CEN_001.png");
+}
+#cen-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CEN_000.png");
+}
+#lup-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LUP_001.png");
+}
+#lup-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_LUP_000.png");
+}
+#sgr-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SGR_001.png");
+}
+#sgr-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SGR_000.png");
+}
+#sco-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SCO_001.png");
+}
+#sco-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_SCO_000.png");
+}
+#car-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CAR_001.png");
+}
+#car-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CAR_000.png");
+}
+#vel-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VEL_001.png");
+}
+#vel-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_VEL_000.png");
+}
+
+
