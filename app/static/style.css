@@ -74,6 +74,10 @@ p {
   align-items: center;
 }
 
+.constellation-text{
+  margin-top: 10px;
+}
+
 .fading-img {
   transition: 500ms;
   height: 50vh;
