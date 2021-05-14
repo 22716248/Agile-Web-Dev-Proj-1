@@ -27,8 +27,7 @@
         {% if current_user.is_anonymous %}
         <a href="/login"><button class="buttons" style="margin-top: 20px;">LOGIN</button></a>
         {% else %}
-        <p>Hi, {{ current_user.username }}!</p>
-        <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT</button></a>
+        <span><p class="mini-profile">Hi, {{ current_user.username }}!</p> <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT</button></a></span>
         {% endif %}
     </div>
     <div class="nav-bar">
