@@ -9,7 +9,7 @@
 
     <!--Custom CSS designed by group-->
     <!--use below for testing html w/o flask-->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <!--use below for flask-->
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">  
 
@@ -23,10 +23,11 @@
 
 <body>
     <div style="font-size:larger">
+        <!-- STYLE THE BUTTONS LATER-->
         {% if current_user.is_anonymous %}
-        <a href="/login">Login</a>
+        <a href="/login"><button>LOGIN</button></a>
         {% else %}
-        <a href="/logout">logout</a>
+        <a href="/logout"><button>LOGOUT</button></a>
         {% endif %}
     </div>
     <div class="nav-bar">
@@ -84,7 +85,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="constellation-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/AquariusCC.jpg/330px-AquariusCC.jpg" alt="test constellation">
+                <div class="fading-img" id="aqr-img"></div>
             </div>
         </div>
 
@@ -123,7 +124,7 @@
 
         <div class="col-sm-6">
             <div class="constellation-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/AquariusCC.jpg/330px-AquariusCC.jpg" alt="test constellation">
+                <div class="fading-img" id="ori-img"></div>
             </div>
         </div>
     </div>

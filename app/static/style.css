@@ -75,7 +75,7 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 }
 
 h1 {
-  color: pink;
+  color: hotpink;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   letter-spacing: 0.5em;
@@ -102,10 +102,17 @@ p {
   width: 40em;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.48;
+  opacity: 0.6;
   margin-top: 30px;
 }
 
+
+#aqr-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_AQR_001.png");
+}
+#aqr-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_AQR_000.png");
+}
 #cru-img {
   background-image: url("https://in-the-sky.org/images/constellations/con_CRU_001.png");
 }
@@ -147,6 +154,12 @@ p {
 }
 #vel-img:hover {
   background-image: url("https://in-the-sky.org/images/constellations/con_VEL_000.png");
+}
+#ori-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_ORI_001.png");
+}
+#ori-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_ORI_000.png");
 }
 
 
