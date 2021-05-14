@@ -25,9 +25,9 @@
     <div style="font-size:larger">
         <!-- STYLE THE BUTTONS LATER-->
         {% if current_user.is_anonymous %}
-        <a href="/login"><button>LOGIN</button></a>
+        <a href="/login"><button class="buttons" style="margin-top: 20px;">LOGIN</button></a>
         {% else %}
-        <a href="/logout"><button>LOGOUT</button></a>
+        <a href="/logout"><button class="buttons">LOGOUT</button></a>
         {% endif %}
     </div>
     <div class="nav-bar">
@@ -131,12 +131,153 @@
         </div>
     </div>
 
+    <div class="col-sm-12" id="section2">
+        <div class="centered">
+            <h2>
+                CENTAURUS
+            </h2>
+        </div>
+    </div>
+
     <div class="row">
+        <div class="col-sm-6">
+            <div class="constellation-image">
+                <div class="fading-img" id="cen-img"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="constellation-text">
+                <p>
+                    Centaurus was first depicted by Babylonians as Bison-man, associated with the Sun God Utu-Samash, 
+                    then by the Greeks as a Centaur. According to Roman poet Ovid, the constellation honours Chiron, a
+                     tutor to many Greek heroes, including Heracles, Theseus and Jason. One of the largest constellations 
+                     in the sky, centaurus is home to Alpha Centuari and Beta Centuari, which make a triple star system with
+                     Proxima Centuari. Alpha Centuari is the third brightest star in the sky, and the closest star system to our sun. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12" id="section1">
+        <div class="centered">
+            <h2>
+                LUPUS
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="constellation-text">
+                <p>
+                    In ancient times, Lupus (Latin for 'wolf') was considered to be the an animal being hunted or killed by centaurus. Although ancient, it has no mythological assosication.
+                    In 1006 AD, within Lupus, the supernova SN 1006 occurred. This is brightest stellar event in recorded history, and would have been clearly visible during daytime.
+                    Lupus is the 46th constellation in size. It is located in the third quadrant of the southern hemisphere (SQ3) and can be seen at latitudes between +35° and -90°.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="constellation-image">
+                <div class="fading-img" id="lup-img"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12" id="section2">
+            <div class="centered">
+                <h2>
+                    SAGITTARIUS
+                </h2>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="constellation-image">
+                <div class="fading-img" id="sgr-img"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="constellation-text">
+                <p>
+                    Sagittarius, Latin for 'archer' and one of the 12 Zodiac, was first identified by the Babylonians, and adopted by the Greeks. 
+                    It is conflicted whether it is Chiron, tutor of Jason, or Crotus, the inventor of archery. 
+                    The bow of the constellation stands poised towards the star Antares, the heart of Scorpius, if Scorpius should ever attack Hercules.
+                    On August 15, 1977, the Big Ear radio telescope observed a strong narrowband radio signal. Known as the 'Wow!' signal, 
+                    it was used to support the search for extraterrestrial intelligence, and remains the strongest candidate for an alien radio transmissed ever detected.
+                    Sagittarius is near the densest spot of the Milky Way, the galactic center. Because of this, Sagittarius is home to many star clusters and nebulae. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-12" id="section3">
+        <div class="centered">
+            <h2>
+                SCORPIUS
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="constellation-text">
+                <p>
+                    In Greek myth, Scorpius is the scorpion sent to kill Orion the hunter, and is a reminder for mortals to be mindful of their hubris.
+                    The scorpion is also recognised in Oceanic cultures: The Javanese of Indonesia recognise it as 'Banyakangrem' - 'the brooded sawn' or 'Kalapa Doyong' - 
+                    'leaning coconut tree'; In Hawaii it is the demigod Maui's fishhook - 'Ka Makau Nui o Māui' - 'the Big Fishhook of Māui'.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="constellation-image">
+                <div class="fading-img" id="sco-img"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12" id="section2">
+        <div class="centered">
+            <h2>
+                CANIS MAJOR
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="constellation-image">
+                <div class="fading-img" id="cen-img"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="constellation-text">
+                <p>
+                    In Greek mythology, Canis Major is known to be associated with Laelaps the fastest dog in the world that will catch anything. 
+                    It represents the larger of Orion's two hunting dogs who follows the hunter as he hunts the hare Lepus.
+                    The constellation can be found by taking Orion's belt and stretching an imaginary line through it, down and to the left. This will locate Sirius,
+                     the brightest star in the sky and home to Canis Major. Canis Major is the 43rd biggest constellation in the sky.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="margin-top: 200px; margin-bottom: 100px;">
         <div class="col-sm-12">
             {% if current_user.is_anonymous %}
-            <a href="/login"><button>LOGIN TO TRY THE QUIZ!</button></a>
+            <a href="/login"><button class="buttons">LOGIN TO TRY THE QUIZ!</button></a>
             {% else %}
-            <a href="/quiz"><button>TAKE ME TO THE QUIZ!</button></a>
+            <a href="/quiz"><button class="buttons">TAKE ME TO THE QUIZ!</button></a>
             {% endif %}
         </div>
     </div>
