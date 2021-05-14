@@ -40,38 +40,8 @@ body::-webkit-scrollbar { /* hides scrollbar Chrome */
 }
 
 
-.centered { /* centered text, for intro image */
-  position: absolute;
-  transform: translate(-50%, -50%);
-  /* top: 50%; */
-  left: 50%;
+.centered {
   text-align: center;
-}
-
-.introduction { /* overview image and text*/
-  position: relative;
-}
-
-.introduction:after { /* makes the rest of the content go below the section */
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-.constellation:after { /* makes the rest of the content go below the section */
-  content: "";
-  clear: both;
-  display: table;
-}
-.overview {
-  position: relative;
-  text-align: center;
-  height: 120px;
-}
-.quiz {
-  position: relative;
-  height: auto;
 }
 
 h1 {
@@ -87,23 +57,32 @@ h2 {
   margin: auto;
   letter-spacing: 0.2em;
   font-size: 3em;
-  padding: 10%;
+  padding: 5%;
 }
 p {
   color: lightgrey;
+  width: 80%;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
-  font-size: 2.5em;
+  font-size: 3em;
+}
+
+.constellation-image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fading-img {
   transition: 500ms;
   height: 50vh;
-  width: 40em;
+  width: 60%;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.6;
-  margin-top: 30px;
+  margin-top: 5%;
 }
 
 
