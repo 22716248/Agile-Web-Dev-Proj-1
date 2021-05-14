@@ -159,5 +159,11 @@ p {
 #ori-img:hover {
   background-image: url("https://in-the-sky.org/images/constellations/con_ORI_000.png");
 }
+#cma-img {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CMA_001.png");
+}
+#cma-img:hover {
+  background-image: url("https://in-the-sky.org/images/constellations/con_CMA_000.png");
+}
 
 
