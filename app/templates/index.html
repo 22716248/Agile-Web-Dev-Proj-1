@@ -130,5 +130,16 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            {% if current_user.is_anonymous %}
+            <a href="/login"><button>LOGIN TO TRY THE QUIZ!</button></a>
+            {% else %}
+            <a href="/quiz"><button>TAKE ME TO THE QUIZ!</button></a>
+            {% endif %}
+        </div>
+    </div>
+
 </body>
 </html>
