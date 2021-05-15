@@ -11,12 +11,44 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
 
+        <!-- Our script file-->
+        <script src="constelattion.js"></script> 
+
         <title> Login Page </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Password Checker Script-->
         <script>
         
+            $(document).ready(function(){
+
+                // Hide at beggining
+                $("#password-strength").hide();
+
+                $("#password-field").keypress(function() {
+                    
+                    $("#password-strength").show();
+
+                    // This is the issue. How to get the text from field.
+                    let password = $("#password-field").text()
+
+                    let strength = passwordStrengthChecker(password);
+                    
+                    if (strength == 1) {
+                        $("#password-strength").html("Your password strength is: <span style=\"color: darkred;\">very weak.</span>");
+                    } else if (strength == 2){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: red;\">weak.</span>");
+                    } else if (strength == 3){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: gold;\">passable.</span>");
+                    } else if (strength == 4){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: green;\">strong</span>");
+                    } else {
+                        $("#password-strength").html("Your password strength is: <span style=\"color: darkgreen;\">very strong</span>");
+                    }
+
+                });
+            }); 
+
         </script>
 
     </head>
@@ -43,6 +75,9 @@
                     <span style="color: red;">[{{ error }}]</span>
                     {% endfor %}
                 </p>
+
+                <p id="password-strength"></p>
+
                 <p class="support-text">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
                 <p>{{ form.submit() }}</p> <br> <br>
                 <p class="support-text">New User? <a href="{{ url_for('register') }}"><button class="buttons">Click to Register! ></button></a></p>
