@@ -132,6 +132,10 @@ p {
   margin-top: 5%;
 }
 
+.hover-me {
+  font-size: 20px;
+}
+
 
 #aqr-img {
   background-image: url("https://in-the-sky.org/images/constellations/con_AQR_001.png");
