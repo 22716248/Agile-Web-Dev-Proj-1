@@ -116,8 +116,10 @@ p {
 
 .mini-profile {
   display: inline-block;
+  text-align: right;
   margin-top: 4px;
   font-size: 25px;
+  padding-right: 20px;
   color: lightyellow;
 }
 

@@ -27,8 +27,11 @@
         {% if current_user.is_anonymous %}
         <a href="/login"><button class="buttons" style="margin-top: 20px;">LOGIN</button></a>
         {% else %}
-        <span><p class="mini-profile">Hi, {{ current_user.username }}!</p> <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT</button></a></span>
-        <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+        <span><p class="mini-profile">Hi, {{ current_user.username }}!</p>
+            <span>
+                <a href="{{ url_for('user', username=current_user.username) }}"><button class="buttons" style="margin-top: 20px;"><span class="glyphicon glyphicon-user"></span>  PROFILE</button></a>
+                <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT</button></a></span>
+            </span>
         {% endif %}
     </div>
     <div class="nav-bar">
