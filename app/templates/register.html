@@ -4,49 +4,43 @@
         <title>
             Register
         </title>
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-        <!--Custom CSS designed by group-->
-        <!--use below for testing html w/o flask-->
-        <link rel="stylesheet" href="style.css">
-        <!--use below for flask-->
         <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">  
-    
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-
     </head>
     <body style="background: rgb(28,29,47);">
-        <h1>Register</h1>
+
+        <p style="margin-top: 50px;"> <a href="/"><button class="buttons">Click here to go back to start</button></a></p> <br>
+        <br> <br>
+
+
+        <h1>Register: </h1> <br>
         <form action="" method="post">
             {{ form.hidden_tag() }}
-            <p>
-                {{ form.username.label }}<br>
-                {{ form.username(size=30) }}<br>
+            <p class="support-text">
+                {{ form.username.label }}
+                {{ form.username(size=30) }}
                 {% for error in form.username.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>
-                {{ form.password.label }}<br>
-                {{ form.password(size=30) }}<br>
+            <p class="support-text">
+                {{ form.password.label }}
+                {{ form.password(size=30) }}
                 {% for error in form.password.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>
-                {{ form.password2.label }}<br>
-                {{ form.password2(size=30) }}<br>
+            <p class="support-text">
+                {{ form.password2.label }}
+                {{ form.password2(size=30) }}
                 {% for error in form.password2.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
             <p>{{ form.submit() }}</p>
+
+            <br><br>
+
+            <p class="support-text">Already have an account? <a href="{{ url_for('login') }}"><button class="buttons">Click to Login! ></button></a></p>
         </form>
     </body>
 </html>
