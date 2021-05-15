@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <h1> User: {{ user.username }}</h1>
-    <p>
-        Score: <b>{{ score.score }}
-    </p>
+    <head>
+        <title>
+            {{ user.username }}'s' Profile
+        </title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!--Custom CSS designed by group-->
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+    </head>
+    <body style="background: rgb(28,29,47);">
+        <h1 style="margin-top: 100px;"> User: {{ user.username }}</h1>
+        <br>
+        <p>
+            Latest Score: <b>{{ score.score }}
+        </p>
+    </body>
 </html>
