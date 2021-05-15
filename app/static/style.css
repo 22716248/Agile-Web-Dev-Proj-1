@@ -88,6 +88,11 @@ p {
 
 }
 
+.buttons:hover {
+  color: rgb(28,29,47);
+  background-color: white;
+}
+
 #submit {
   background-color: transparent;
   border: solid;
@@ -101,6 +106,12 @@ p {
   font-size: 20px;
   margin: 4px 0px;
   cursor: pointer;
+}
+
+#submit:hover {
+  color: rgb(28,29,47);
+  background-color: white;
+
 }
 
 .mini-profile {
