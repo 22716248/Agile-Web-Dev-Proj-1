@@ -27,6 +27,13 @@ class Score(db.Model):
     def __repr__(self):
         return '<score {}>'.format(self.score)
 
+class Question(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    question = db.Column(db.String)
+    constellation = db.Column(db.String)
+    def __repr__(self):
+        return '<Question {}>'.format(self.question) 
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
