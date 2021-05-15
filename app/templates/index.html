@@ -287,9 +287,9 @@
     <div class="row" style="margin-top: 200px; margin-bottom: 100px;">
         <div class="col-sm-12">
             {% if current_user.is_anonymous %}
-            <a href="/login"><button class="buttons">LOGIN TO TRY THE QUIZ!</button></a>
+            <a href="/login"><button class="buttons" style="padding: 12px 20px; font-size: 22px;">Please Login to try the Quiz.  <span class="glyphicon glyphicon-log-in"></span> </button></a>
             {% else %}
-            <a href="/quiz"><button class="buttons">TAKE ME TO THE QUIZ!</button></a>
+            <p> <a href="/quiz"><button class="buttons" style="padding: 12px 30px; font-size: 25px;"> Take the Constelattion Quiz! <span class="glyphicon glyphicon-paste"></span></button></a></button></a></p> <br>
             {% endif %}
         </div>
     </div>
