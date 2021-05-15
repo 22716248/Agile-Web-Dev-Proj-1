@@ -42,7 +42,7 @@
                     {% endfor %}
                 </p>
 
-                <p class="support-text">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                <p class="support-text" style="cursor: pointer;">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
                 <br> <br> <p>{{ form.submit() }}</p> <br> <br>
                 <p class="support-text">New User? <a href="{{ url_for('register') }}"><button class="buttons">Click to Register! ></button></a></p>
                 {% with messages = get_flashed_messages() %}
