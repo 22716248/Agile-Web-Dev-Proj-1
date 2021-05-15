@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, ValidationError, DataRequired, EqualTo
-from app.models import User
+from app.models import User, Score
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
