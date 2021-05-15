@@ -1,9 +1,9 @@
 # Agile-Web-Dev-Proj-1  
 **Authors:**  
+Adam Chen #22988367  
+Geraldine Chin #22972043  
 Jakub (Kuba) Wysocki #22716248  
 James Van Ravestein #22730755  
-Geraldine Chin #22972043  
-Adam Chen #22988367  
 
 # Documentation:  
 **14/04 - Initial meeting:**  
@@ -71,12 +71,12 @@ $ python3 -m unittest tests
 ```
 
 **Viewing databases**  
-'''
+```
 $ python
 $ from app import db
 $ from app.models import User, Score
 $ User.query.all()
-'''
+```
 
 **Possible Libraries:**  
 https://github.com/michalsnik/aos  
