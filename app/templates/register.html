@@ -4,8 +4,56 @@
         <title>
             Register
         </title>
-        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">  
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+        <!-- Our script file-->
+        <script type="text/javascript" src="{{ url_for('static', filename='constellation.js') }}"></script>
+        
+        <!-- Password Checker Script-->
+        <script>
+        
+            $(document).ready(function(){
+
+                // ALSO CHECK IF CUSTOM JS FILE IS IMPORTED CORRECTLY
+
+                // Hide at beggining
+                $("#password-strength").hide();
+
+                $("#password").keyup(function() {
+                    
+                    $("#password-strength").show();
+
+                    // This is the issue. How to get the text from field.
+                    let password = $("#password").val()
+
+                    let strength = passwordStrengthChecker(password);
+                    
+                    if (strength <= 1) {
+                        $("#password-strength").html("Your password strength is: <span style=\"color: darkred;\">very weak!</span>");
+                    } else if (strength == 2){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: red;\">weak.</span>");
+                    } else if (strength == 3){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: gold;\">passable.</span>");
+                    } else if (strength == 4){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: green;\">strong.</span>");
+                    } else if (strength == 5){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: darkgreen;\">very strong!</span>");
+                    } else {
+                        $("#password-strength").html("Your password strength is: <span style=\"color: lightblue;\">not working...</span>  strength-value: " + strength);
+                    }
+
+                });
+            }); 
+
+        </script>
     </head>
+
     <body style="background: rgb(28,29,47);">
 
         <p style="margin-top: 50px;"> <a href="/"><button class="buttons">Click here to go back to start</button></a></p> <br>
@@ -36,9 +84,13 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>{{ form.submit() }}</p>
 
             <br><br>
+
+            <p id="password-strength" class="support-text"></p>
+            <p>{{ form.submit() }}</p>
+
+            <br><br><br>
 
             <p class="support-text">Already have an account? <a href="{{ url_for('login') }}"><button class="buttons">Click to Login! ></button></a></p>
         </form>

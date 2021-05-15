@@ -26,7 +26,7 @@ function passwordStrengthChecker(password) {
 
     // Passwords less than 8 are automatically very weak
     if (password.length < 8) {
-        return 0;
+        return 1;
     } else if (password.length <= 12) { // 8 - 12 are ok ( no bonus )
         passStrength += 0; // can restructre later this is redundant
     } else { // passwords over 12 are good!
