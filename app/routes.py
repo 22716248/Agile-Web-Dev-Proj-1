@@ -1,8 +1,8 @@
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
 from app.forms import LoginForm, RegistrationForm
-from flask_login import current_user, login_user, logout_user
-from app.models import User
+from flask_login import current_user, login_user, logout_user, login_required
+from app.models import User, Score
 from werkzeug.urls import url_parse
 @app.route('/')
 @app.route('/index')
@@ -50,8 +50,8 @@ def register():
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    Score = [
-        {'User': user, 'Score': 'Score'},
+    score = [
+        {'User': user, 'Score': 'score'},
     ]
-    return render_template('user.html', user=user, score=score)
+    return render_template('profile.html', user=user, score=score)
 
