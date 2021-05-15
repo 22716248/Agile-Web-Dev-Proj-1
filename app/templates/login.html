@@ -5,30 +5,34 @@
         <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
         <title> Login Page </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body style="background: rgb(28,29,47);">
         <div class="container">
-            <h1> Login: </h1>
-            <p> <a href="/">Click here to go back to start</a></p>
+            <p style="margin-top: 50px;"> <a href="/"><button class="buttons">Click here to go back to start</button></a></p> <br>
+
+            <br> <br>
+
+            <h1> Login: </h1> <br>
             <form action="" method="post" novalidate>
                 {{ form.hidden_tag() }}
-                <p>
-                    {{ form.username.label }}<br>
-                    {{ form.username(size=32) }}<br>
+                <p class="support-text">
+                    {{ form.username.label }}
+                    {{ form.username(size=32) }}
                     {% for error in form.username.errors %}
                     <span style="color: red;">[{{ error }}]</span>
                     {% endfor %}
                 </p>
-                <p>
-                    {{ form.password.label }}<br>
-                    {{ form.password(size=32) }}<br>
+                <p class="support-text">
+                    {{ form.password.label }}
+                    {{ form.password(size=32) }}
                     {% for error in form.password.errors %}
                     <span style="color: red;">[{{ error }}]</span>
                     {% endfor %}
                 </p>
-                <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-                <p>{{ form.submit() }}</p>
-                <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+                <p class="support-text">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                <p>{{ form.submit() }}</p> <br> <br>
+                <p class="support-text">New User? <a href="{{ url_for('register') }}"><button class="buttons">Click to Register! ></button></a></p>
                 {% with messages = get_flashed_messages() %}
                 {% if messages %}
                 <ul>
