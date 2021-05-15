@@ -6,7 +6,7 @@ Geraldine Chin #22972043
 Adam Chen #22988367  
 
 # Documentation:  
-**Week 1/5 - Initial meeting:**  
+**14/04 - Initial meeting:**  
 ![20210414_184446](https://user-images.githubusercontent.com/54944385/115646677-3a43c680-a355-11eb-864e-f98daa3cf477.jpg)  
 [In image: Page layout sketch, list of page sections required and quiz ideas. Page sections listed: 1. Intro, 2. Sky overview, 3. Constellation overview, 4. Quiz, 5. Page navigation/progress bar]
 * Project ideas & requirements
@@ -14,7 +14,7 @@ Adam Chen #22988367
 * Gamified quiz experience: connect-the dots or finding constellation in image
 * This week: complete page mock-up with introduction, overview, constellation, navigation and quiz sections
 
-**Week 2/5 Meeting:**  
+**21/04 Meeting:**  
 * Group task delegation, general organisation
 * Technologies required, including virtual environments and flask
 * Improving user experience: move most text to optional hidden sections, have key info visible initially
@@ -23,17 +23,17 @@ Adam Chen #22988367
 * Fix nav bar vanishing behind some images
 * This week: incorporate required technologies, general page improvements
 
-**Week 3/5 Meeting:**  
+**28/04 Meeting:**  
 * Flask and databases
 
-**Week 4/5 Meeting:**  
+**05/05 Meeting:**  
 * Flask remodel, database integration
 * Remodel page layout, css and info
 * authentication
 * testing: unit tests and selenium
 * complete test on another page
 
-**Week 5/5 Meeting:**  
+**12/05 Meeting:**  
 * Priority: Finish quiz
 * Priority: Finish database
 * Priority: Finish testing suite
@@ -41,25 +41,42 @@ Adam Chen #22988367
 * Password validation
 * Fancy quiz questions: e.g. connect the dots
 
-**Installation**
+**15/05 Meeting:**  
+* Finish quiz, incorporating the database
+* Database migrations
+* Implement viewing quiz question scores from database on profile page
+* Selenium testing
+* CSS and content finishing touches, professional look and feel
+* Fix or remove nav bar
+* Incorporate quality-of-life JavaScript wherever possible
+
+
+**Installation**  
 ```
 $ sudo apt install python3
 $ sudo apt install python3-pip
 $ sudo apt-get install python3-setuptools
-$ sudo apt install python3-flask
 $ git clone https://github.com/22716248/Agile-Web-Dev-Proj-1
 $ pip3 install -r requirements.txt
 ```
 
-**Execution**
+**Execution**  
 ```
 $ flask run
 ```
 
-**Executing testing**
+**Executing testing**  
 ```
-$ python3 -W ignore tests.py
+$ python3 -m unittest tests
 ```
+
+**Viewing databases**  
+'''
+$ python
+$ from app import db
+$ from app.models import User, Score
+$ User.query.all()
+'''
 
 **Possible Libraries:**  
 https://github.com/michalsnik/aos  
