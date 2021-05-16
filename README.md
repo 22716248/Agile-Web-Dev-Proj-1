@@ -55,8 +55,9 @@ James Van Ravestein #22730755 (j-vanrav, WeeJimmyy)
 * CSS, Layout, responsiveness for different screen sizes  
 * Nav bar/ progress indicator  
 * Improve quiz user experience and improve feedback (per question and question type results)  
+* Route user to profile after quiz  
 * Pre-load images  
-* Password changing functionality
+* Password changing functionality  
 
 **Installation**  
 ```
