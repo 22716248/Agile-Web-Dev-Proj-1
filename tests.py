@@ -74,6 +74,28 @@ class UserModelCase(unittest.TestCase):
         response = self.app.get('/login', content_type='html/text')
         self.assertFalse(b'Welcome' in response.data)
 
+    # register page loads and returned response is 200 OK
+    def test_registration_page_works(self):
+        response = self.app.get('/register', content_type='html/text')
+        self.assertTrue(b'Register' in response.data) 
+        self.assertEqual(response.status_code, 200)
+
+    # login page contains incorrect infomation/text
+    def test_registration_page_incorrect_info(self):
+        response = self.app.get('/register', content_type='html/text')
+        self.assertFalse(b'Welcome' in response.data)
+
+    # login page contains correct infomation/text
+    def test_registration_page_correct_info(self):
+        response = self.app.get('/register', content_type='html/text')
+        self.assertTrue(b'Register' in response.data)
+
+    # test user register page works
+    def test_user_register(self):
+        u1 = User.query.get('0')
+        response = self.app.post('/register', data=dict(
+            username = u1.username, password = u1.password_hash, password_repeat = u1.password_hash), follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
 
     if __name__ == '__main__':
         unittest.main(verbosity=2)
