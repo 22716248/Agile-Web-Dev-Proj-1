@@ -234,3 +234,9 @@ input {
 }
 
 
+.nav-icon {
+  filter: invert(100%);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
