@@ -1,3 +1,4 @@
+from typing import NewType
 from flask.globals import session
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
@@ -14,19 +15,94 @@ def index():
 def quiz():
     form = QuizForm()
     if form.validate_on_submit:
-        db.session.add(form.question1.data)
-        db.session.add(form.question2.data)
-        db.session.add(form.question3.data)
-        db.session.add(form.question4.data)
-        db.session.add(form.question5.data)
-        db.session.add(form.question6.data)
-        db.session.add(form.question7.data)
-        db.session.add(form.question8.data)
-        db.session.add(form.question9.data)
-        db.session.add(form.question10.data)
+        user_id = current_user.get_id()
+        scores = []
+
+        # All questions hardcoded
+
+        #Question 1
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 2
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 3
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 4
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 5
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 6
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 7
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 8
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 9
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        #Question 10
+        if form.question1.data == "answer":
+            newScore = Score(user_id=user_id, score=1) # Make DB add a new attempt each time? !<<<<<<<<<<<
+            scores.append(newScore)
+        else:
+            newScore = Score(user_id=user_id, score=0)
+            scores.append(newScore)
+
+        db.session.add_all(scores)
         db.session.commit()
-        flash('Congratulations, you have submitted your test!')
-        return redirect(url_for('profile'))
+        #return redirect(url_for('index'))
     return render_template('quiz.html', title='Take Quiz', form=form)
 
 @app.route('/login', methods=['GET', 'POST'])

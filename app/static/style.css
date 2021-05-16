@@ -71,6 +71,10 @@ p {
   font-size: 2.5em;
 }
 
+input {
+  color: #0a0d1b;
+}
+
 /* Add hover option for buttons */
 .buttons {
   background-color: transparent;
