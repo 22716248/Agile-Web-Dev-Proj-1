@@ -10,10 +10,13 @@ class UserModelCase(unittest.TestCase):
         db.create_all()
         u1 = User(id=0,username='Test')
         u2 = User(id=1,username='Unit')
+        u3 = User(id=3,username='Unit') #Same username test
         u1.setpw('Hello')
-        u2.setpw('World')
+        u2.setpw('1111')
+        u3.setpw('World')
         db.session.add(u1)
         db.session.add(u2)
+        db.session.add(u3)
         db.session.commit()
 
     def tearDown(self):
