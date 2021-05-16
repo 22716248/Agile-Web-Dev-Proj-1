@@ -149,10 +149,17 @@ def register():
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     user_id = current_user.get_id()
+    attempts_list = Score.query.with_entities(Score.attempts).where(Score.user_id == user_id).all()
     score = Score.query.filter(and_(Score.user_id==user_id,Score.score==1)).count()
-    scores = [
-        {'body': score},
-    ]
+    scores = []
+    if attempts_list:
+            attempts = max(attempts_list)[0]
+            for i in list(range(attempts)):
+                score = Score.query.filter(and_(Score.user_id==user_id,Score.score==1,Score.attempts == i+1)).count()
+                scores.append({'body':score})
+    else:
+        scores=[{'body':"Have not attempted the quiz"}]
+    
     return render_template('profile.html', user=user, scores=scores)
 
 @app.route('/favicon.ico')

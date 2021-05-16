@@ -23,11 +23,14 @@
         <h1 style="margin-top: 100px;"> User: {{ user.username }}</h1>
         <br>
         <p>
+            {% set a = [1] %}
             {% for s in scores %}
             <p>
-            Latest Score: {{ s.body }}/10</b>
+            Attempt {{ a[0] }}: {{ s.body }}/10</b>
             </p>
+            {% if a.append(a.pop() + 1) %}{% endif %}
             {% endfor %}
+        
         </p>
     </body>
 </html>
