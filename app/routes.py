@@ -13,20 +13,20 @@ def index():
 
 @app.route('/quiz', methods=['POST', 'GET'])
 def quiz():
-    form = QuizForm()
-    if form.validate_on_submit:
+    quizform = QuizForm()
+    if quizform.validate_on_submit():
         user_id = current_user.get_id()
         scores = []
         attempts_list = Score.query.with_entities(Score.attempts).where(Score.user_id == user_id).all()
         if attempts_list:
             curr_attempt = max(attempts_list)[0] + 1
         else:
-            curr_attempt = 0
+            curr_attempt = 1
 
         # All questions hardcoded
 
         #Question 1
-        if form.question1.data == "Crux":
+        if quizform.question1.data == "Crux":
             newScore = Score(user_id=user_id, score=1, question_id=1, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -34,7 +34,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 2
-        if form.question2.data == "Australia, New Zealand, Brazil, Papua New Guinea, Samoa":
+        if quizform.question2.data == "Australia, New Zealand, Brazil, Papua New Guinea, Samoa":
             newScore = Score(user_id=user_id, score=1, question_id=2, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -42,7 +42,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 3
-        if form.question3.data == "Aquarius":
+        if quizform.question3.data == "Aquarius":
             newScore = Score(user_id=user_id, score=1, question_id=3, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -50,7 +50,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 4
-        if form.question4.data == "Orion":
+        if quizform.question4.data == "Orion":
             newScore = Score(user_id=user_id, score=1, question_id=4, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -58,7 +58,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 5
-        if form.question5.data == "Centaurus":
+        if quizform.question5.data == "Centaurus":
             newScore = Score(user_id=user_id, score=1, question_id=5, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -66,7 +66,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 6
-        if form.question6.data == "Lupus":
+        if quizform.question6.data == "Lupus":
             newScore = Score(user_id=user_id, score=1, question_id=6, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -74,7 +74,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 7
-        if form.question7.data == "Sagittarius":
+        if quizform.question7.data == "Sagittarius":
             newScore = Score(user_id=user_id, score=1, question_id=7, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -82,7 +82,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 8
-        if form.question8.data == "Scorpius":
+        if quizform.question8.data == "Scorpius":
             newScore = Score(user_id=user_id, score=1, question_id=8, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -90,7 +90,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 9
-        if form.question9.data == "Canis Major":
+        if quizform.question9.data == "Canis Major":
             newScore = Score(user_id=user_id, score=1, question_id=9, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -98,7 +98,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 10
-        if form.question10.data == "Alpha Centauri":
+        if quizform.question10.data == "Alpha Centauri":
             newScore = Score(user_id=user_id, score=1, question_id=10, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -107,8 +107,8 @@ def quiz():
 
         db.session.add_all(scores)
         db.session.commit()
-        #return redirect(url_for('index'))
-    return render_template('quiz.html', title='Quiz', form=form)
+        return redirect(url_for('index'))
+    return render_template('quiz.html', title='Quiz', quizform=quizform)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
