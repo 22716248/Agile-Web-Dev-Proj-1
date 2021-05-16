@@ -16,7 +16,11 @@
         <h1 style="margin-top: 100px;"> User: {{ user.username }}</h1>
         <br>
         <p>
-            Latest Score: <b>{{ score.score }}
+            {% for s in scores %}
+            <p>
+            Latest Score: {{ s.body }}/10</b>
+            </p>
+            {% endfor %}
         </p>
 
         <p style="margin-top: 50px;"> <a href="/"><button class="buttons">Go back Home  <span class="glyphicon glyphicon-home"></span></button></a></p>

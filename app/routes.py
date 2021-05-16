@@ -6,6 +6,7 @@ from app.forms import LoginForm, QuizForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import Question, User, Score
 from werkzeug.urls import url_parse
+from sqlalchemy import and_
 @app.route('/')
 @app.route('/index')
 def index():
@@ -147,10 +148,12 @@ def register():
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    score = [
-        {'User': user, 'Score': 'score'},
+    user_id = current_user.get_id()
+    score = Score.query.filter(and_(Score.user_id==user_id,Score.score==1)).count()
+    scores = [
+        {'body': score},
     ]
-    return render_template('profile.html', user=user, score=score)
+    return render_template('profile.html', user=user, scores=scores)
 
 @app.route('/favicon.ico')
 def favicon():
