@@ -16,6 +16,9 @@ class RegistrationForm(FlaskForm):
         'Repeat Password', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Register')
 
+class QuizForm(FlaskForm):
+    question1 = StringField()
+
 def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user is not None:
