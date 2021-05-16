@@ -2,7 +2,6 @@ import unittest, os
 from app import app, db
 from app.models import User, Score
 
-
 class UserModelCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
@@ -10,13 +9,14 @@ class UserModelCase(unittest.TestCase):
         db.create_all()
         u1 = User(id=0,username='Test')
         u2 = User(id=1,username='Unit')
-        u3 = User(id=3,username='Unit') #Same username test
+        # u3 = User(id=3,username='Unit') #Same username test
+        u4 = User(id=2,username='Bob')
         u1.setpw('Hello')
-        u2.setpw('1111')
-        u3.setpw('World')
+        u2.setpw('World')
+        # u3.setpw('1111')
         db.session.add(u1)
         db.session.add(u2)
-        db.session.add(u3)
+        # db.session.add(u3)
         db.session.commit()
 
     def tearDown(self):
@@ -35,12 +35,13 @@ class UserModelCase(unittest.TestCase):
     # check for no password when user entered a password
     def test_no_password(self):
         u = User.query.get('1')
-        self.assertFalse(u.checkpw('Hello'))
+        self.assertFalse(u.checkpw('testing'))
 
-    # login returned response is 200 OK
+    # test user login works
     def test_user_login(self):
+        u1 = User.query.get('0')
         response = self.app.post('/login', data=dict(
-            username='Test', email='test@gmail.com', password='Hello'), follow_redirects=True)
+            username = u1.username, password = u1.password_hash), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
     # login page loads and returned response is 200 OK
@@ -57,7 +58,8 @@ class UserModelCase(unittest.TestCase):
     # login page contains incorrect infomation/text
     def test_login_page_incorrect_info(self):
         response = self.app.get('/login', content_type='html/text')
-        self.assertFalse(b'Hi' in response.data)
+        self.assertFalse(b'Welcome' in response.data)
+
 
     if __name__ == '__main__':
         unittest.main(verbosity=2)
