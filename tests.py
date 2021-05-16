@@ -37,6 +37,20 @@ class UserModelCase(unittest.TestCase):
         u = User.query.get('1')
         self.assertFalse(u.checkpw('testing'))
 
+    # checks username is same
+    def test_same_username(self):
+        u1 = User.query.get('0')
+        u2 = User.query.get('1')
+        self.assertEqual(u1.username, 'Test')
+        self.assertEqual(u2.username, 'Unit')
+
+    # checks username is not the same
+    def test_username_is_incorrect(self):
+        u1 = User.query.get('0')
+        u2 = User.query.get('1')
+        self.assertNotEqual(u1.username, 'Test2')
+        self.assertNotEqual(u2.username, 'Unit2')
+
     # test user login works
     def test_user_login(self):
         u1 = User.query.get('0')
