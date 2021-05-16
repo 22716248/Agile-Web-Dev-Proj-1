@@ -154,6 +154,11 @@ input {
   color: lemonchiffon;
 }
 
+.quiz-question {
+  font-size: 30px;
+  text-align: right;
+  padding: 30px;
+}
 
 #aqr-img {
   background-image: url("https://in-the-sky.org/images/constellations/con_AQR_001.png");

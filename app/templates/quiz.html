@@ -26,20 +26,23 @@
     </head>
     <body style="background: rgb(28,29,47);">
         <div class="quiz" id="quiz">
+
+            <p style="margin-top: 50px;"> <a href="/"><button class="buttons">Go back Home</button></a></p> <br>
+
             <div class="quiz-title">
-                <h1>
+                <h1 style="margin: 50px 0px 50px 0px;">
                     QUIZ
                 </h1>
             </div>
             <div class="question">
-                <p>
-                    Here will be the quiz
-                </p>
+                <h2 style="padding: 10px;">
+                    This will test you on the skills you have learnt about constelattions! 
+                </h2>
             </div>
             <form action="" method="post" novalidate>
                     {{ quizform.hidden_tag() }}
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question1.label }}
                         {{ quizform.question1(size=32) }}
                         {% for error in quizform.question1.errors %}
@@ -47,7 +50,7 @@
                         {% endfor %}
                     </p>
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question2.label }}
                         {{ quizform.question2(size=32) }}
                         {% for error in quizform.question2.errors %}
@@ -55,7 +58,7 @@
                         {% endfor %}
                     </p>
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question3.label }}
                         {{ quizform.question3(size=32) }}
                         {% for error in quizform.question3.errors %}
@@ -63,7 +66,7 @@
                         {% endfor %}
                     </p>
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question4.label }}
                         {{ quizform.question4(size=32) }}
                         {% for error in quizform.question4.errors %}
@@ -71,7 +74,7 @@
                         {% endfor %}
                     </p>
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question5.label }}
                         {{ quizform.question5(size=32) }}
                         {% for error in quizform.question5.errors %}
@@ -79,7 +82,7 @@
                         {% endfor %}
                     </p>
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question6.label }}
                         {{ quizform.question6(size=32) }}
                         {% for error in quizform.question6.errors %}
@@ -87,28 +90,28 @@
                         {% endfor %}
                     </p>
 
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question7.label }}
                         {{ quizform.question7(size=32) }}
                         {% for error in quizform.question7.errors %}
                         <span style="color: red;font-size: small;">{{ error }}</span>
                         {% endfor %}
                     </p>
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question8.label }}
                         {{ quizform.question8(size=32) }}
                         {% for error in quizform.question8.errors %}
                         <span style="color: red;font-size: small;">{{ error }}</span>
                         {% endfor %}
                     </p>
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question9.label }}
                         {{ quizform.question9(size=32) }}
                         {% for error in quizform.question9.errors %}
                         <span style="color: red;font-size: small;">{{ error }}</span>
                         {% endfor %}
                     </p>
-                    <p class="support-text">
+                    <p class="quiz-question">
                         {{ quizform.question10.label }}
                         {{ quizform.question10(size=32) }}
                         {% for error in quizform.question10.errors %}
