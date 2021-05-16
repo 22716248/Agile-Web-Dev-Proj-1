@@ -33,6 +33,18 @@
             <p class="attempt">
             Attempt {{ a[0] }}: {{ s.body }}/10</b>
             </p>
+        <p> 
+            {% set a = [1] %}
+            {% for s in scores %}
+            {% if s.body ==  'Have not attempted the quiz' %}
+                <p>
+                    Complete quiz to see quiz history
+                </p>
+            {% else %}
+                <p>
+                Attempt {{ a[0] }}: {{ s.body }}</b>
+                </p>
+            {% endif %}
             {% if a.append(a.pop() + 1) %}{% endif %}
             {% endfor %}
         
