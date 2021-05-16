@@ -27,12 +27,6 @@
 
         <div id="results" style="width:600px;height:300px;margin:auto;"></div>
 
-        <p>
-            {% set a = [1] %}
-            {% for s in scores %}
-            <p class="attempt">
-            Attempt {{ a[0] }}: {{ s.body }}/10</b>
-            </p>
         <p> 
             {% set a = [1] %}
             {% for s in scores %}
@@ -41,7 +35,7 @@
                     Complete quiz to see quiz history
                 </p>
             {% else %}
-                <p>
+                <p class="attempt">
                 Attempt {{ a[0] }}: {{ s.body }}</b>
                 </p>
             {% endif %}
@@ -59,8 +53,8 @@
                 let attempt = elements[i].innerHTML;
                 words = attempt.split(' ')
                 console.log(words)
-                attempts.push( parseInt( words[13].slice(0, -1) ) )
-                scores.push( parseInt( words[14].slice(0, -4) ) )
+                attempts.push( parseInt( words[17].slice(0, -1) ) )
+                scores.push( parseInt( words[18].slice(0, -4) ) )
                 console.log(attempts, scores)
             }
             RESULTS = document.getElementById('results');
