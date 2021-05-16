@@ -17,7 +17,6 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('Register')
 
 class QuizForm(FlaskForm):
-    
     question1 = StringField("Question 1: ", validators=[DataRequired()])
     question2 = StringField("Question 2: ", validators=[DataRequired()])
     question3 = StringField("Question 3: ", validators=[DataRequired()])
