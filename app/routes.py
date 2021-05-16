@@ -156,7 +156,8 @@ def user(username):
             attempts = max(attempts_list)[0]
             for i in list(range(attempts)):
                 score = Score.query.filter(and_(Score.user_id==user_id,Score.score==1,Score.attempts == i+1)).count()
-                scores.append({'body':score})
+                scor = "score" + "/10"
+                scores.append({'body':scor})
     else:
         scores=[{'body':"Have not attempted the quiz"}]
     
