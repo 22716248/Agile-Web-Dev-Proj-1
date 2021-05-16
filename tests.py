@@ -61,7 +61,6 @@ class UserModelCase(unittest.TestCase):
     # login page loads and returned response is 200 OK
     def test_login_page_works(self):
         response = self.app.get('/login', content_type='html/text')
-        self.assertTrue(b'Login' in response.data) 
         self.assertEqual(response.status_code, 200)
 
     # login page contains correct infomation/text
@@ -76,8 +75,7 @@ class UserModelCase(unittest.TestCase):
 
     # register page loads and returned response is 200 OK
     def test_registration_page_works(self):
-        response = self.app.get('/register', content_type='html/text')
-        self.assertTrue(b'Register' in response.data) 
+        response = self.app.get('/register', content_type='html/text') 
         self.assertEqual(response.status_code, 200)
 
     # login page contains incorrect infomation/text
@@ -100,6 +98,21 @@ class UserModelCase(unittest.TestCase):
     # test logout works, returns response OK 200
     def test_logout_works(self):
         response = self.app.get('/logout', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+
+    # index page contains incorrect infomation/text
+    def test_index_page_incorrect_info(self):
+        response = self.app.get('/index', content_type='html/text')
+        self.assertFalse(b'Welcome' in response.data)
+
+    # index page contains correct infomation/text
+    def test_index_page_correct_info(self):
+        response = self.app.get('/index', content_type='html/text')
+        self.assertTrue(b'Constellation' in response.data)
+    
+    # test index works, returns response OK 200
+    def test_index_works(self):
+        response = self.app.get('/index', follow_redirects=True)
         self.assertEqual(response.status_code, 200)
     
 
