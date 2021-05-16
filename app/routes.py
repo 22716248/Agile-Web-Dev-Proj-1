@@ -1,6 +1,7 @@
+from flask.globals import session
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, RegistrationForm
+from app.forms import LoginForm, QuizForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Score
 from werkzeug.urls import url_parse
@@ -11,7 +12,22 @@ def index():
 
 @app.route('/quiz')
 def quiz():
-	return render_template('quiz.html')
+    form = QuizForm()
+    if form.validate_on_submit:
+        db.session.add(form.quesion1.data)
+        db.session.add(form.quesion2.data)
+        db.session.add(form.quesion3.data)
+        db.session.add(form.quesion4.data)
+        db.session.add(form.quesion5.data)
+        db.session.add(form.quesion6.data)
+        db.session.add(form.quesion7.data)
+        db.session.add(form.quesion8.data)
+        db.session.add(form.quesion9.data)
+        db.session.add(form.quesion10.data)
+        db.session.commit()
+        flash('Congratulations, you have submitted your test!')
+        return redirect(url_for('profile'))
+	return render_template('quiz.html', title='Take Quiz', form=form)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
