@@ -28,28 +28,87 @@
                     Here will be the quiz
                 </p>
             </div>
-                <form>
-                    <label for="q1">Question 1:</label><br>
-                    <input type="text" id="q1" name="q1" value="Enter Answer Here"><br>
-                    <label for="q2">Questions 2:</label><br>
-                    <input type="text" id="q2" name="q2" value="Enter Answer Here"><br>
-                    <label for="q1">Question 3:</label><br>
-                    <input type="text" id="q3" name="q3" value="Enter Answer Here"><br>
-                    <label for="q2">Questions 4:</label><br>
-                    <input type="text" id="q4" name="q4" value="Enter Answer Here"><br>
-                    <label for="q1">Question 5:</label><br>
-                    <input type="text" id="q5" name="q5" value="Enter Answer Here"><br>
-                    <label for="q1">Question 6:</label><br>
-                    <input type="text" id="q6" name="q6" value="Enter Answer Here"><br>
-                    <label for="q2">Questions 7:</label><br>
-                    <input type="text" id="q7" name="q7" value="Enter Answer Here"><br>
-                    <label for="q1">Question 8:</label><br>
-                    <input type="text" id="q8" name="q8" value="Enter Answer Here"><br>
-                    <label for="q2">Questions 9:</label><br>
-                    <input type="text" id="q9" name="q9" value="Enter Answer Here"><br>
-                    <label for="q1">Question 10:</label><br>
-                    <input type="text" id="q10" name="q10" value="Enter Answer Here"><br><br>
-                    <input type="submit" value="Submit Answers">
+            <form action="" method="post" novalidate>
+                    {{ form.hidden_tag() }}
+
+                    <p class="support-text">
+                        {{ form.question1.label }}
+                        {{ form.question1(size=32) }}
+                        {% for error in form.question1.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p class="support-text">
+                        {{ form.question2.label }}
+                        {{ form.question2(size=32) }}
+                        {% for error in form.question2.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p class="support-text">
+                        {{ form.question3.label }}
+                        {{ form.question3(size=32) }}
+                        {% for error in form.question3.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p class="support-text">
+                        {{ form.question4.label }}
+                        {{ form.question4(size=32) }}
+                        {% for error in form.question4.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p class="support-text">
+                        {{ form.question5.label }}
+                        {{ form.question5(size=32) }}
+                        {% for error in form.question5.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p class="support-text">
+                        {{ form.question6.label }}
+                        {{ form.question6(size=32) }}
+                        {% for error in form.question6.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p class="support-text">
+                        {{ form.question7.label }}
+                        {{ form.question7(size=32) }}
+                        {% for error in form.question7.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                    <p class="support-text">
+                        {{ form.question8.label }}
+                        {{ form.question8(size=32) }}
+                        {% for error in form.question8.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                    <p class="support-text">
+                        {{ form.question9.label }}
+                        {{ form.question9(size=32) }}
+                        {% for error in form.question9.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                    <p class="support-text">
+                        {{ form.question10.label }}
+                        {{ form.question10(size=32) }}
+                        {% for error in form.question10.errors %}
+                        <span style="color: red;font-size: small;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <br> <br> <p>{{ form.submit() }}</p> <br> <br>
                 </form>
     
     
