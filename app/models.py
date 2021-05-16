@@ -23,7 +23,7 @@ class Score(db.Model):
     score = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     attempts = db.Column(db.Integer)
-
+    question_id = db.Column(db.Integer)
     def __repr__(self):
         return '<score {}>'.format(self.score)
 
