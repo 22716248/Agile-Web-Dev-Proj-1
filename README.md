@@ -2,7 +2,7 @@
 **Authors:**  
 Adam Chen #22988367 (Adam301c)  
 Geraldine Chin #22972043 (de-ceased)  
-Jakub (Kuba) Wysocki #22716248 (22716248)  
+Jakub (Kuba) Wysocki #22716248 (kuba, 22716248)  
 James Van Ravestein #22730755 (j-vanrav, WeeJimmyy)  
 
 # Documentation:  
