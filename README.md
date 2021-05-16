@@ -50,6 +50,13 @@ James Van Ravestein #22730755 (j-vanrav, WeeJimmyy)
 * Fix or remove nav bar
 * Incorporate quality-of-life JavaScript wherever possible
 
+**16/05 Meeting:**  
+* Selenium tests  
+* CSS, Layout, responsiveness for different screen sizes  
+* Nav bar/ progress indicator  
+* Improve quiz user experience and improve feedback (per question and question type results)  
+* Pre-load images  
+* Password changing functionality
 
 **Installation**  
 ```
