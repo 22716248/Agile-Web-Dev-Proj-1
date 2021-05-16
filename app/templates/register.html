@@ -17,19 +17,15 @@
         
         <!-- Password Checker Script-->
         <script>
-        
+
             $(document).ready(function(){
 
-                // ALSO CHECK IF CUSTOM JS FILE IS IMPORTED CORRECTLY
-
-                // Hide at beggining
                 $("#password-strength").hide();
 
                 $("#password").keyup(function() {
                     
                     $("#password-strength").show();
 
-                    // This is the issue. How to get the text from field.
                     let password = $("#password").val()
 
                     let strength = passwordStrengthChecker(password);
@@ -84,7 +80,6 @@
                 <span style="color: red;font-size: small;">{{ error }}</span>
                 {% endfor %}
             </p>
-
             <br><br>
 
             <p id="password-strength" class="support-text"></p>
