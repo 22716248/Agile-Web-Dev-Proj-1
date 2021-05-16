@@ -13,6 +13,13 @@
 
     </head>
     <body style="background: rgb(28,29,47);">
+
+        <p style="margin-top: 30px;">
+            <a href="/"><button class="buttons">Go back Home  <span class="glyphicon glyphicon-home"></span></button></a>
+            <a href="/quiz"><button class="buttons">Take the Quiz!  <span class="glyphicon glyphicon-paste"></span></button></a>
+            <a href="/logout"><button class="buttons" style="margin-top: 20px;">Logout  <span class="glyphicon glyphicon-log-out"></span></button></a>
+        </p>
+
         <h1 style="margin-top: 100px;"> User: {{ user.username }}</h1>
         <br>
         <p>
@@ -22,10 +29,5 @@
             </p>
             {% endfor %}
         </p>
-
-        <p style="margin-top: 50px;"> <a href="/"><button class="buttons">Go back Home  <span class="glyphicon glyphicon-home"></span></button></a></p>
-        <p> <a href="/quiz"><button class="buttons">Take the Quiz!  <span class="glyphicon glyphicon-paste"></span></button></a></button></a></p> <br>
-        <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT  <span class="glyphicon glyphicon-log-out"></span></button></a></span>
-
     </body>
 </html>
