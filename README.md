@@ -90,3 +90,5 @@ https://en.wikipedia.org/wiki/Urania%27s_Mirror
 https://in-the-sky.org/data/constellations_list.php  
 https://www.constellation-guide.com/  
 https://favicon.io/emoji-favicons/milky-way  
+https://suberic.net/~dmm/astro/constellations.html  
+https://xtrp.io/blog/2020/02/05/scroll-progress-bar-in-js-and-css/  
