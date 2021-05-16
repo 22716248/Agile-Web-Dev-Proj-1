@@ -15,6 +15,10 @@ class RegistrationForm(FlaskForm):
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Register')
+    def validate_username(self, username):
+        user = User.query.filter_by(username=username.data).first()
+        if user is not None:
+            raise ValidationError('Please use a different username.')
 
 class QuizForm(FlaskForm):
     question1 = StringField("Question 1: ", validators=[DataRequired()])
@@ -30,7 +34,3 @@ class QuizForm(FlaskForm):
 
     submit = SubmitField('Submit Answers.')
 
-def validate_username(self, username):
-        user = User.query.filter_by(username=username.data).first()
-        if user is not None:
-            raise ValidationError('Please use a different username.')
