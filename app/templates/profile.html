@@ -11,6 +11,9 @@
         <!--Custom CSS designed by group-->
         <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <!-- Plotly.JS Library for drawing graphs-->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
@@ -32,7 +35,7 @@
             {% for s in scores %}
             {% if s.body ==  'Have not attempted the quiz' %}
                 <p>
-                    Complete quiz to see quiz history
+                    Complete the Quiz to see Quiz history and see Quiz Results Graph!
                 </p>
             {% else %}
                 <p class="attempt">
@@ -49,6 +52,14 @@
             let scores = [];
             let attempts = [];
             let elements = document.getElementsByClassName("attempt");
+            console.log(elements.length)
+
+            if (elements.length < 1){
+                $('#results').hide();
+            } else {
+                $('#results').show();
+            }
+
             for (var i = 0; i < elements.length; i++) {
                 let attempt = elements[i].innerHTML;
                 words = attempt.split(' ')
