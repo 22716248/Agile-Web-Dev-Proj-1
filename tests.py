@@ -97,5 +97,11 @@ class UserModelCase(unittest.TestCase):
             username = u1.username, password = u1.password_hash, password_repeat = u1.password_hash), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
+    # test logout works, returns response OK 200
+    def test_logout_works(self):
+        response = self.app.get('/logout', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+    
+
     if __name__ == '__main__':
         unittest.main(verbosity=2)
