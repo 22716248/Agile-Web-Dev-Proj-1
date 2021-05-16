@@ -18,7 +18,10 @@ def quiz():
         user_id = current_user.get_id()
         scores = []
         attempts_list = Score.query.with_entities(Score.attempts).where(Score.user_id == user_id).all()
-        curr_attempt = max(attempts_list)[0] + 1
+        if attempts_list:
+            curr_attempt = max(attempts_list)[0] + 1
+        else:
+            curr_attempt = 0
 
         # All questions hardcoded
 
