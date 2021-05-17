@@ -1,37 +1,10 @@
+/* CSS Module for Constelattion Project */
+
+/* Elements */
 html {
   scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
   scrollbar-width: none; /* hides scrollbar Firefox */
 }
-
-/* NAVIGATION BAR */
-.nav-bar { /* fix the nav bar center right on screen */
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000; /* Should always be at the front*/
-}
-.nav-button { /* turn the hyperlinks into white buttons */
-  color: white;
-  text-decoration: none;
-  font-size: 2.4em;
-}
-.nav-button img {
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  transition: linear .07s;
-}
-.nav-button img:hover {
-  transform: scale(3)
-}
-.nav-icon {
-  filter: invert(100%);
-}
-.nav-icon-shaded {
-  filter: invert(70%);
-}
-
 
 body {
   background: rgb(28,29,47);
@@ -43,17 +16,9 @@ body {
   text-align: center;
   color:white;
 }
+
 body::-webkit-scrollbar { /* hides scrollbar Chrome */
   display: none;
-}
-
-
-.centered {
-  text-align: center;
-}
-
-.support-text {
-  font-size: 30px;
 }
 
 h1 {
@@ -91,6 +56,49 @@ input {
   color: #0a0d1b;
 }
 
+/* NAVIGATION BAR */
+.nav-bar { /* fix the nav bar center right on screen */
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Should always be at the front*/
+}
+
+.nav-button { /* turn the hyperlinks into white buttons */
+  color: white;
+  text-decoration: none;
+  font-size: 2.4em;
+}
+
+.nav-button img {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  transition: linear .07s;
+}
+
+.nav-button img:hover {
+  transform: scale(3)
+}
+
+.nav-icon {
+  filter: invert(100%);
+}
+
+.nav-icon-shaded {
+  filter: invert(70%);
+}
+
+/* Classes */
+.centered {
+  text-align: center;
+}
+
+.support-text {
+  font-size: 30px;
+}
+
 /* Add hover option for buttons */
 .buttons {
   background-color: transparent;
@@ -113,26 +121,6 @@ input {
   background-color: white;
 }
 
-#submit {
-  background-color: transparent;
-  border: solid;
-  border-color: white;
-  border-radius: 10px;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 0px;
-  cursor: pointer;
-}
-
-#submit:hover {
-  color: rgb(28,29,47);
-  background-color: white;
-
-}
 
 .mini-profile {
   font-size: 25px;
@@ -172,6 +160,59 @@ input {
   margin-left: auto;
   padding: 30px;
 }
+
+/* Id's */
+#submit {
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 0px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  color: rgb(28,29,47);
+  background-color: white;
+
+}
+
+#title {
+  height: 100vh;
+  text-align: center;
+  padding: 40vh 0%;
+}
+
+/*0 opacity allows sections to fade in with javascript*/
+#section-intro {
+  opacity: 0;
+}
+#section-crux {
+  opacity: 0;
+}
+#section-aquarius {
+  opacity: 0;
+}
+#section-orion-canis-major-taurus {
+  opacity: 0;
+}
+#section-centaurus-lupus {
+  opacity: 0;
+}
+#section-sagittarius-scorpius {
+  opacity: 0;
+}
+#section-argo-navis {
+  opacity: 0;
+}
+
+/* IMAGE SET UP*/
 
 #aqr-img {
   background-image: url("https://in-the-sky.org/images/constellations/con_AQR_001.png");
@@ -244,34 +285,4 @@ input {
 }
 #tau-img:hover {
   background-image: url("https://in-the-sky.org/images/constellations/con_TAU_000.png");
-}
-
-
-#title {
-  height: 100vh;
-  text-align: center;
-  padding: 40vh 0%;
-}
-
-/*0 opacity allows sections to fade in with javascript*/
-#section-intro {
-  opacity: 0;
-}
-#section-crux {
-  opacity: 0;
-}
-#section-aquarius {
-  opacity: 0;
-}
-#section-orion-canis-major-taurus {
-  opacity: 0;
-}
-#section-centaurus-lupus {
-  opacity: 0;
-}
-#section-sagittarius-scorpius {
-  opacity: 0;
-}
-#section-argo-navis {
-  opacity: 0;
 }

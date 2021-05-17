@@ -3,13 +3,14 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, ValidationError, DataRequired, EqualTo
 from app.models import User, Score
 
-
+# Used for existing users into their account
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
 
+# Used to register an existing user
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -21,6 +22,7 @@ class RegistrationForm(FlaskForm):
         if user is not None:
             raise ValidationError('Please use a different username.')
 
+# Used to submit a Quiz Attempt, by a user.
 class QuizForm(FlaskForm):
     question1 = StringField("Question 1: For the above image, identify the constellation.", validators=[DataRequired()])
     question2 = StringField("Question 2: For the above image, identify the constellation.", validators=[DataRequired()])
