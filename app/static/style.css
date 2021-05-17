@@ -2,21 +2,33 @@ html {
   scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
 }
 
+/* NAVIGATION BAR */
 .nav-bar { /* fix the nav bar center right on screen */
   position: fixed;
   right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000; /* Should always be at the front*/
 }
 .nav-button { /* turn the hyperlinks into white buttons */
   color: white;
   text-decoration: none;
   font-size: 1.2em;
-  transition: 100ms linear;
 }
-.nav-button:hover { /* turn the hyperlinks into white buttons */
-  color: grey;
+.nav-button img {
+  filter: invert(100%);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  transition: linear .07s;
 }
+.nav-button img:hover {
+  transform: scale(3)
+}
+.nav-button-shaded {
+  filter: invert(70%);
+}
+
 
 body {
   background: rgb(28,29,47);
@@ -30,13 +42,6 @@ body {
 }
 body::-webkit-scrollbar { /* hides scrollbar Chrome */
   display: none;
-}
-
-
-.page-title {
-  height: 100vh;
-  text-align: center;
-  padding: 40vh 0%;
 }
 
 
@@ -234,9 +239,29 @@ input {
 }
 
 
-.nav-icon {
-  filter: invert(100%);
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
+#intro {
+  height: 100vh;
+  text-align: center;
+  padding: 40vh 0%;
+}
+#section-intro {
+  opacity: 0;
+}
+#section-crux {
+  opacity: 0;
+}
+#section-aquarius {
+  opacity: 0;
+}
+#section-orion-canis-major-taurus {
+  opacity: 0;
+}
+#section-centaurus-lupus {
+  opacity: 0;
+}
+#section-sagittarius-scorpius {
+  opacity: 0;
+}
+#section-argo-navis {
+  opacity: 0;
 }

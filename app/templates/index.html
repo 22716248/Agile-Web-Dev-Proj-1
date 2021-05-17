@@ -17,7 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Our script file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='constellation.js') }}"></script>
 
 </head>
 
@@ -44,13 +47,13 @@
             <tr><td><a href="#section-crux" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/Crux.png" class="nav-icon" alt="crux"></a></td></tr>
             <tr><td><a href="#section-aquarius" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/Aquarius.png" class="nav-icon" alt="crux"></a></td></tr>
             <tr><td><a href="#section-orion-canis-major-taurus" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/Orion.png" class="nav-icon" alt="crux"></a></td></tr>
-            <tr><td><a href="#section-sagittarius-scorpius" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/Sagittarius.png" class="nav-icon" alt="crux"></a></td></tr>
             <tr><td><a href="#section-centaurus-lupus" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/Lupus.png" class="nav-icon" alt="crux"></a></td></tr>
+            <tr><td><a href="#section-sagittarius-scorpius" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/Sagittarius.png" class="nav-icon" alt="crux"></a></td></tr>
             <tr><td><a href="#section-argo-navis" class="nav-button"><img src="https://suberic.net/~dmm/astro/img/calli/double/ArgoNavis.png" class="nav-icon" alt="crux"></a></td></tr>
         </table>
     </div>
 
-    <div class="page-title" id="intro">
+    <div id="intro">
         <h1>Constellation Quiz</h1>
         <p>Let's learn about constellations.</p>
         <p>Scroll down to find out more!</p>
@@ -58,7 +61,7 @@
     </div>
 
     <div id="section-intro">
-        <div class="col-sm-12" id="section1">
+        <div class="col-sm-12">
             <div class="centered">
                 <h2>
                     Constellations, what are they?
