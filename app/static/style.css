@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
+  scrollbar-width: none; /* hides scrollbar Firefox */
 }
 
 /* NAVIGATION BAR */
@@ -38,7 +39,7 @@ body {
   background-color: #0a0d1b;
   margin: 0% auto; /* remove empty space around content */
   -ms-overflow-style: none; /* hides scrollbar, IE & Edge */
-  scrollbar-width: none; /* hides scrollbar Firefox */
+  
   text-align: center;
   color:white;
 }
