@@ -76,12 +76,12 @@
                 attempts.push( parseInt( words[17].slice(0, -1) ) )
                 scores.push( parseInt( words[40].slice(0, -4) ) )
             }
-
+            
+            //Style of Graph
             RESULTS = document.getElementById('results');
             layo = {
                 'layout': {
                     paper_bgcolor : "rgba(0,0,0,0)",
-                    title : 'Quiz Results',
                     plot_bgcolor : "rgba(0,0,0,0)",
                     font : {
                         color : '#FFFFFF',
@@ -106,6 +106,8 @@
                     
                 }
             }
+
+            //Draw the graph on the page
             Plotly.newPlot( 
             RESULTS, [
             { y: scores, x: attempts }], 
