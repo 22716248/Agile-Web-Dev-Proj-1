@@ -1,4 +1,4 @@
-# Agile-Web-Dev-Proj-1 &middot; [![Python 3.9.4](https://img.shields.io/badge/python-3.9.4-blue.svg)](https://www.python.org/downloads/release/python-394/) [![Flask 1.1.2](https://img.shields.io/badge/flask-1.1.2-blue.svg)](https://pypi.org/project/Flask/)  
+# Constellation Quiz &middot; [![Python 3.9.4](https://img.shields.io/badge/python-3.9.4-blue.svg)](https://www.python.org/downloads/release/python-394/) [![Flask 1.1.2](https://img.shields.io/badge/flask-1.1.2-blue.svg)](https://pypi.org/project/Flask/)  
 Written for [UWA CITS3403 semester 1 2021 project](https://teaching.csse.uwa.edu.au/units/CITS3403/)  
 Constellation quiz is a web app designed to teach and quiz people on constellations, made with HTML, CSS, Flask, AJAX, JQuery, and Bootstrap.  
 
