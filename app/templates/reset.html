@@ -15,8 +15,40 @@
         <!-- Our script file-->
         <script type="text/javascript" src="{{ url_for('static', filename='constellation.js') }}"></script>
 
+        <script>
+
+            $(document).ready(function(){
+
+                $("#password-strength").hide();
+
+                $("#password_n").keyup(function() {
+                    
+                    $("#password-strength").show();
+
+                    let password = $("#password_n").val()
+
+                    let strength = passwordStrengthChecker(password);
+                    
+                    if (strength <= 1) {
+                        $("#password-strength").html("Your password strength is: <span style=\"color: darkred;\">very weak!</span>");
+                    } else if (strength == 2){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: red;\">weak.</span>");
+                    } else if (strength == 3){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: gold;\">passable.</span>");
+                    } else if (strength == 4){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: green;\">strong.</span>");
+                    } else if (strength == 5){
+                        $("#password-strength").html("Your password strength is: <span style=\"color: darkgreen;\">very strong!</span>");
+                    } else {
+                        $("#password-strength").html("Your password strength is: <span style=\"color: lightblue;\">not working...</span>  strength-value: " + strength);
+                    }
+
+                });
+            }); 
+
+        </script>
     </head>
-    <body>
+    <body style="background: rgb(28,29,47);">
         <a href="{{ url_for('user', username=current_user.username) }}"><button class="buttons" style="margin-top: 20px;">PROFILE  <span class="glyphicon glyphicon-user"></span></button></a>
         <h1>Reset Password </h1> <br>
         <form action="" method="post">
@@ -35,6 +67,8 @@
                 <span style="color: red;font-size: small;">{{ error }}</span>
                 {% endfor %}
             </p>
+            <br>
+            <p id="password-strength" class="support-text"></p>
             <br>
             <p>{{ form.submit() }}</p>
             {% with messages = get_flashed_messages() %}
