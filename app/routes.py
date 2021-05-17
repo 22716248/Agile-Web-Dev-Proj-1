@@ -151,10 +151,10 @@ def user(username):
     user_id = current_user.get_id()
     attempts_list = Score.query.with_entities(Score.attempts).where(Score.user_id == user_id).all()
     scores = []
-    ls = []
     if attempts_list:
             attempts = max(attempts_list)[0]
             for i in list(range(attempts)):
+                ls = []
                 score = Score.query.filter(and_(Score.user_id==user_id,Score.attempts == i+1)).all()
                 scoret = Score.query.filter(and_(Score.user_id==user_id,Score.score==1,Score.attempts == i+1)).count()
                 for x in list(range(len(score))):
