@@ -1,38 +1,43 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import time
+
+successful_test = 0
 
 # create a new Firefox session
-driver = webdriver.Firefox()
-driver.implicitly_wait(30)
+driver = webdriver.Edge()
+driver.implicitly_wait(2)
 driver.maximize_window()
 
 # Navigate to the application home page
-driver.get("http://www.google.com")
+driver.get("http://127.0.0.1:5000/")
 
-# get the search textbox
-search_field = driver.find_element_by_id("lst-ib")
-search_field.clear()
+# get the login button
+login_in_button = driver.find_element_by_id("login-register")
+login_in_button.click()
 
-# enter search keyword and submit
-search_field.send_keys("Selenium WebDriver Interview questions")
-search_field.submit()
+# login the user
 
-# get the list of elements which are displayed after the search
-# currently on result page using find_elements_by_class_name method
-lists= driver.find_elements_by_class_name("_Rm")
+#Test for login page
+driver.implicitly_wait(2)
+login_page_title = driver.title
+successful_test += 1
 
-# get the number of elements found
-print ("Found " + str(len(lists)) + " searches:")
+assert login_page_title == "Login Page"
+username = driver.find_element_by_id("username")
+password = driver.find_element_by_id("password")
+login   = driver.find_element_by_id("submit")
+username.send_keys("testuser")
+password.send_keys("1111")
+login.click()
 
-# iterate through each element and print the text that is
-# name of the search
+# move to profile
+time.sleep(1)
+profile_page_title = driver.title
+assert profile_page_title == "testuser's Profile"
+successful_test += 1
 
-i=0
-for listitem in lists:
-   print (listitem.get_attribute("innerHTML"))
-   i=i+1
-   if(i>10):
-      break
+print("All " + str(successful_test) +  " out of " + str(successful_test) + " tests successful")
 
 # close the browser window
 driver.quit()
