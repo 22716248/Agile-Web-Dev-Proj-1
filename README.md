@@ -95,6 +95,11 @@ $ python -m unittest tests
 $ python .\selenium-webdriver-tests.py
 ```
 
+**Example User**
+```
+username: testuser
+password: 1111
+```
 # Resources:  
 **Sources:**  
 https://www.thoughtco.com/constellations-pictures-gallery-4122769  

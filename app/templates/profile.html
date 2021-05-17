@@ -73,9 +73,8 @@
             for (var i = 0; i < elements.length; i++) {
                 let attempt = elements[i].innerHTML;
                 words = attempt.split(' ')
-                console.log(words)
                 attempts.push( parseInt( words[17].slice(0, -1) ) )
-                scores.push( parseInt( words[30].slice(0, -4) ) )
+                scores.push( parseInt( words[40].slice(0, -4) ) )
             }
 
             RESULTS = document.getElementById('results');
