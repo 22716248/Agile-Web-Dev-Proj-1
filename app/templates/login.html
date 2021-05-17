@@ -44,16 +44,17 @@
                 </p>
 
                 <p class="support-text" style="cursor: pointer;">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-                <br> <br> <p>{{ form.submit() }}</p> <br> <br>
+                 
                 {% with messages = get_flashed_messages() %}
                 {% if messages %}
                 <ul>
                     {% for message in messages %}
-                    <li>{{ message }}</li>
+                    {{ message }}
                     {% endfor %}
                 </ul>
                 {% endif %}
                 {% endwith %}
+                <br> <br> <p>{{ form.submit() }}</p>
             </form>
             <p class="support-text">New User? <a href="{{ url_for('register') }}"><button class="buttons">Click to Register! ></button></a></p>
         </div>

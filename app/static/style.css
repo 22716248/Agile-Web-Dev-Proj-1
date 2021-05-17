@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth; /* makes all moving in the page scroll rather than jump*/
+  scrollbar-width: none; /* hides scrollbar Firefox */
 }
 
 /* NAVIGATION BAR */
@@ -13,19 +14,21 @@ html {
 .nav-button { /* turn the hyperlinks into white buttons */
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 2.4em;
 }
 .nav-button img {
-  filter: invert(100%);
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   transition: linear .07s;
 }
 .nav-button img:hover {
   transform: scale(3)
 }
-.nav-button-shaded {
+.nav-icon {
+  filter: invert(100%);
+}
+.nav-icon-shaded {
   filter: invert(70%);
 }
 
@@ -36,7 +39,7 @@ body {
   background-color: #0a0d1b;
   margin: 0% auto; /* remove empty space around content */
   -ms-overflow-style: none; /* hides scrollbar, IE & Edge */
-  scrollbar-width: none; /* hides scrollbar Firefox */
+  
   text-align: center;
   color:white;
 }
@@ -250,6 +253,8 @@ input {
   text-align: center;
   padding: 40vh 0%;
 }
+
+/*0 opacity allows sections to fade in with javascript*/
 #section-intro {
   opacity: 0;
 }

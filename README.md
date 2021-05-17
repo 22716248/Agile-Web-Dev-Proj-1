@@ -73,17 +73,22 @@ $ pip3 install -r requirements.txt
 $ flask run
 ```
 
-**Executing testing**  
-```
-$ python3 -m unittest tests
-```
-
-**Viewing databases**  
+**Viewing Databases**  
 ```
 $ python
-$ from app import db
-$ from app.models import User, Score
-$ User.query.all()
+>>> from app import db
+>>> from app.models import User, Score
+>>> User.query.all()
+```
+
+**Running Unit Tests**
+```
+$ python -m unittest tests
+```
+
+**Running Selinium Tests**
+```
+$ python .\selenium-webdriver-tests.py
 ```
 
 **Possible Libraries:**  

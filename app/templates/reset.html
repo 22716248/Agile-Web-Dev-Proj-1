@@ -77,16 +77,16 @@
             <br>
             <p id="password-strength" class="support-text"></p>
             <br>
-            <p>{{ form.submit() }}</p>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                 <ul>
                     {% for message in messages %}
-                    <li>{{ message }}</li>
+                    {{ message }}
                     {% endfor %}
                 </ul>
                 {% endif %}
-                {% endwith %}
+            {% endwith %}
+            <p>{{ form.submit() }}</p>
 
             <br><br><br>
         </form>
