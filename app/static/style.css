@@ -14,12 +14,12 @@ html {
 .nav-button { /* turn the hyperlinks into white buttons */
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 2.4em;
 }
 .nav-button img {
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   transition: linear .07s;
 }
 .nav-button img:hover {
