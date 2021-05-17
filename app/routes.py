@@ -7,11 +7,14 @@ from flask_login import current_user, login_user, logout_user, login_required
 from app.models import Question, User, Score
 from werkzeug.urls import url_parse
 from sqlalchemy import and_
+
+# Routes the index main page
 @app.route('/')
 @app.route('/index')
 def index():
 	return render_template('index.html')
 
+# Routes the user to the quiz page
 @app.route('/quiz', methods=['POST', 'GET'])
 def quiz():
     quizform = QuizForm()
@@ -111,6 +114,7 @@ def quiz():
         return redirect(url_for('user', username=current_user.username))
     return render_template('quiz.html', title='Quiz', quizform=quizform)
 
+# Routes the user to the Login Page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -125,13 +129,13 @@ def login():
         return redirect(url_for('user', username=current_user.username))
     return render_template('login.html', title='Sign In', form=form)
 
-#logging out current user
+# Logs out the current user
 @app.route('/logout')
 def logout():
 	logout_user()
 	return redirect(url_for('index'))
 
-#registering new users
+# Register a new user
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -145,7 +149,8 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
-#profile route
+
+# Routes the current user to their profile page
 @app.route('/user/<username>')
 @login_required
 def user(username):
@@ -173,11 +178,12 @@ def user(username):
     
     return render_template('profile.html', user=user, scores=scores)
 
+# Lets the brower know
 @app.route('/favicon.ico')
 def favicon():
     return app.send_static_file('favicon.ico')
 
-#reset password
+# Routes the user to the reset password page
 @app.route('/reset', methods=['GET', 'POST'])
 @login_required
 def reset():

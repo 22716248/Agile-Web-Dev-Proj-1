@@ -36,6 +36,7 @@ class QuizForm(FlaskForm):
     question10 = StringField("Question 10: Which constellation depicts a superhuman giant hunter?", validators=[DataRequired()])
     submit = SubmitField('Submit Answers.')
 
+# This form is used for users to reset their password
 class ResetForm(FlaskForm):
     password_o = PasswordField('Old Password',validators=[DataRequired()])
     password_n = PasswordField('New Password',validators=[DataRequired()])
