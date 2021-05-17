@@ -43,7 +43,8 @@
         {% else %}
         <div class="row">
             <div class="col-sm-12">
-                <span><p class="mini-profile">Hi, {{ current_user.username }}!</p>
+                <p class="mini-profile" style="margin: auto;">Hi, {{ current_user.username }}!</p>
+                <span>
                     <span>
                         <a href="{{ url_for('user', username=current_user.username) }}"><button class="buttons" style="margin-top: 20px;">PROFILE  <span class="glyphicon glyphicon-user"></span></button></a>
                         <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT  <span class="glyphicon glyphicon-log-out"></span></button></a></span>
