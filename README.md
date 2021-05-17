@@ -89,13 +89,14 @@ $ python
 ```
 $ python -m unittest tests
 ```
-Explanations for each unit test are in comments of unittests.py
+The unit tests also check each pages functionality and how the app interacts with the database.  
+Further explanations for each unit test are in comments of unittests.py  
 
 **Running Selinium Tests**
 ```
 $ python .\selenium-webdriver-tests.py
 ```
-These Selinium tests run through the functionality of the webpage by emulating a user registering, logging in, and taking a test.
+These Selinium tests run through the functionality of the webpage by emulating a user registering, logging in, and taking a test.  
 
 **Example User**
 ```
