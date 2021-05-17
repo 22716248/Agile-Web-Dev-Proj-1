@@ -93,6 +93,7 @@ python -m unittest tests
 
 **Running Selinium Tests**
 ```
+python .\selenium-webdriver-tests.py
 ```
 
 **Possible Libraries:**  
