@@ -10,3 +10,4 @@ venv
 **/.DS_Store
 app/__pycache__/models.cpython-39.pyc
 app/__pycache__/routes.cpython-39.pyc
+geckodriver.log
