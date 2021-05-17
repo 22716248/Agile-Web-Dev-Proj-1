@@ -34,8 +34,8 @@ class QuizForm(FlaskForm):
 
     submit = SubmitField('Submit Answers.')
 class ResetForm(FlaskForm):
-    password_o = PasswordField('Old password',validators=[DataRequired()])
-    password_n = PasswordField('New password',validators=[DataRequired()])
-    password_n2 = PasswordField('Repeat new password', validators=[DataRequired(), EqualTo('password_n')])
-    submit = SubmitField('Register')
+    password_o = PasswordField('Old Password',validators=[DataRequired()])
+    password_n = PasswordField('New Password',validators=[DataRequired()])
+    password_n2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password_n')])
+    submit = SubmitField('Change Password')
 
