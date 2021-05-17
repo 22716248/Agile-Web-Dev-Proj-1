@@ -159,9 +159,9 @@ def user(username):
                 scoret = Score.query.filter(and_(Score.user_id==user_id,Score.score==1,Score.attempts == i+1)).count()
                 for x in list(range(len(score))):
                     if str(score[x]) == "<score 0>":
-                        ls.append("Q" + str(x + 1) + ":" + '\u274C')
+                        ls.append("Q" + str(x + 1) + ": " + '\u274C')
                     if str(score[x]) == "<score 1>":
-                        ls.append("Q" + str(x + 1) + ":" + '\u2714')
+                        ls.append("Q" + str(x + 1) + ": " + '\u2714')
                 ls.append("TOTAL : " + str(scoret) + "/10")
                 scores.append({'body':ls})
     else:
