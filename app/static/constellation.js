@@ -53,8 +53,8 @@ function fadeIn(sectionId) {
     }
 }
 $(window).scroll(function() {
-    var hT = $('#section-intro').offset().top,
-        hH = $('#section-intro').outerHeight(),
+    var hT = $('#intro').offset().top,
+        hH = $('#intro').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
@@ -63,8 +63,8 @@ $(window).scroll(function() {
     }
 });
 $(window).scroll(function() {
-    var hT = $('#section-crux').offset().top,
-        hH = $('#section-crux').outerHeight(),
+    var hT = $('#cru').offset().top,
+        hH = $('#cru').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
@@ -73,8 +73,8 @@ $(window).scroll(function() {
     }
 });
 $(window).scroll(function() {
-    var hT = $('#section-aquarius').offset().top,
-        hH = $('#section-aquarius').outerHeight(),
+    var hT = $('#aqr').offset().top,
+        hH = $('#aqr').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
@@ -83,8 +83,8 @@ $(window).scroll(function() {
     }
 });
 $(window).scroll(function() {
-    var hT = $('#section-orion-canis-major-taurus').offset().top,
-        hH = $('#section-orion-canis-major-taurus').outerHeight(),
+    var hT = $('#ori-cma-tau').offset().top,
+        hH = $('#ori-cma-tau').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
@@ -93,8 +93,8 @@ $(window).scroll(function() {
     }
 });
 $(window).scroll(function() {
-    var hT = $('#section-centaurus-lupus').offset().top,
-        hH = $('#section-centaurus-lupus').outerHeight(),
+    var hT = $('#cen-lup').offset().top,
+        hH = $('#cen-lup').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
@@ -103,8 +103,8 @@ $(window).scroll(function() {
     }
 });
 $(window).scroll(function() {
-    var hT = $('#section-sagittarius-scorpius').offset().top,
-        hH = $('#section-sagittarius-scorpius').outerHeight(),
+    var hT = $('#sgr-sco').offset().top,
+        hH = $('#sgr-sco').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
@@ -113,8 +113,8 @@ $(window).scroll(function() {
     }
 });
 $(window).scroll(function() {
-    var hT = $('#section-argo-navis').offset().top,
-        hH = $('#section-argo-navis').outerHeight(),
+    var hT = $('#argo').offset().top,
+        hH = $('#argo').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
