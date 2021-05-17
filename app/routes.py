@@ -108,7 +108,7 @@ def quiz():
 
         db.session.add_all(scores)
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('user', username=current_user.username))
     return render_template('quiz.html', title='Quiz', quizform=quizform)
 
 @app.route('/login', methods=['GET', 'POST'])

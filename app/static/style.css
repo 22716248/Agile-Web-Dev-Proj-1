@@ -54,6 +54,7 @@ h1 {
   margin: auto;
   letter-spacing: 0.5em;
   font-size: 4em;
+  word-wrap: break-word;
 }
 h2 {
   color: lemonchiffon;
@@ -120,7 +121,7 @@ input {
 
 .mini-profile {
   display: inline-block;
-  text-align: right;
+  text-align: left;
   margin-top: 4px;
   font-size: 25px;
   padding-right: 20px;
