@@ -50,6 +50,14 @@ James Van Ravestein #22730755 (j-vanrav, WeeJimmyy)
 * Fix or remove nav bar
 * Incorporate quality-of-life JavaScript wherever possible
 
+**16/05 Meeting:**  
+* Selenium tests  
+* CSS, Layout, responsiveness for different screen sizes  
+* Nav bar/ progress indicator  
+* Improve quiz user experience and improve feedback (per question and question type results)  
+* Route user to profile after quiz  
+* Pre-load images  
+* Password changing functionality  
 
 **Installation**  
 ```
@@ -90,3 +98,5 @@ https://en.wikipedia.org/wiki/Urania%27s_Mirror
 https://in-the-sky.org/data/constellations_list.php  
 https://www.constellation-guide.com/  
 https://favicon.io/emoji-favicons/milky-way  
+https://suberic.net/~dmm/astro/constellations.html  
+https://xtrp.io/blog/2020/02/05/scroll-progress-bar-in-js-and-css/  

@@ -2,10 +2,11 @@ from typing import NewType
 from flask.globals import session
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, QuizForm, RegistrationForm
+from app.forms import LoginForm, QuizForm, RegistrationForm, ResetForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import Question, User, Score
 from werkzeug.urls import url_parse
+from sqlalchemy import and_
 @app.route('/')
 @app.route('/index')
 def index():
@@ -26,7 +27,7 @@ def quiz():
         # All questions hardcoded
 
         #Question 1
-        if quizform.question1.data == "Crux":
+        if (quizform.question1.data).lower() == "crux":
             newScore = Score(user_id=user_id, score=1, question_id=1, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -34,7 +35,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 2
-        if quizform.question2.data == "Australia, New Zealand, Brazil, Papua New Guinea, Samoa":
+        if( quizform.question2.data).lower() == "aquarius":
             newScore = Score(user_id=user_id, score=1, question_id=2, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -42,7 +43,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 3
-        if quizform.question3.data == "Aquarius":
+        if( quizform.question3.data).lower() == "centaurus":
             newScore = Score(user_id=user_id, score=1, question_id=3, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -50,7 +51,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 4
-        if quizform.question4.data == "Orion":
+        if( quizform.question4.data).lower() == "scorpius":
             newScore = Score(user_id=user_id, score=1, question_id=4, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -58,7 +59,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 5
-        if quizform.question5.data == "Centaurus":
+        if( quizform.question5.data).lower() == "sagittarius":
             newScore = Score(user_id=user_id, score=1, question_id=5, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -66,7 +67,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 6
-        if quizform.question6.data == "Lupus":
+        if( quizform.question6.data).lower() == "lupus":
             newScore = Score(user_id=user_id, score=1, question_id=6, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -74,7 +75,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 7
-        if quizform.question7.data == "Sagittarius":
+        if( quizform.question7.data).lower() == "puppis":
             newScore = Score(user_id=user_id, score=1, question_id=7, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -82,7 +83,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 8
-        if quizform.question8.data == "Scorpius":
+        if( quizform.question8.data).lower() == "vela":
             newScore = Score(user_id=user_id, score=1, question_id=8, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -90,7 +91,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 9
-        if quizform.question9.data == "Canis Major":
+        if( quizform.question9.data).lower() == "centaurus":
             newScore = Score(user_id=user_id, score=1, question_id=9, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -98,7 +99,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 10
-        if quizform.question10.data == "Alpha Centauri":
+        if (quizform.question10.data).lower() == "orion":
             newScore = Score(user_id=user_id, score=1, question_id=10, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -107,7 +108,7 @@ def quiz():
 
         db.session.add_all(scores)
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('user', username=current_user.username))
     return render_template('quiz.html', title='Quiz', quizform=quizform)
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -147,11 +148,35 @@ def register():
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    score = [
-        {'User': user, 'Score': 'score'},
-    ]
-    return render_template('profile.html', user=user, score=score)
+    user_id = current_user.get_id()
+    attempts_list = Score.query.with_entities(Score.attempts).where(Score.user_id == user_id).all()
+    score = Score.query.filter(and_(Score.user_id==user_id,Score.score==1)).count()
+    scores = []
+    if attempts_list:
+            attempts = max(attempts_list)[0]
+            for i in list(range(attempts)):
+                score = Score.query.filter(and_(Score.user_id==user_id,Score.score==1,Score.attempts == i+1)).count()
+                scor = str(score) + "/10"
+                scores.append({'body':scor})
+    else:
+        scores=[{'body':"Have not attempted the quiz"}]
+    
+    return render_template('profile.html', user=user, scores=scores)
 
 @app.route('/favicon.ico')
 def favicon():
     return app.send_static_file('favicon.ico')
+
+@app.route('/reset', methods=['GET', 'POST'])
+@login_required
+def reset():
+    user = current_user
+    form = ResetForm()
+    if form.validate_on_submit():
+        if not user.checkpw(form.password_o.data):
+            flash("Password Incorrect")
+            return redirect(url_for('reset'))
+        user.setpw(form.password_n.data)
+        db.session.commit()
+        return redirect(url_for('user', username=current_user.username))
+    return render_template('reset.html', title= 'Reset Password', form=form)

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Reset Password
+        </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+        <!-- Our script file-->
+        <script type="text/javascript" src="{{ url_for('static', filename='constellation.js') }}"></script>
+
+    </head>
+    <body>
+        <a href="{{ url_for('user', username=current_user.username) }}"><button class="buttons" style="margin-top: 20px;">PROFILE  <span class="glyphicon glyphicon-user"></span></button></a>
+        <h1>Reset Password </h1> <br>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p class="support-text">
+                {{ form.password_o.label }}
+                {{ form.password_o(size=30) }} <br>
+                {% for error in form.password_o.errors %}
+                <span style="color: red;font-size: small;">{{ error }}</span>
+                {% endfor %}
+            </p>
+            <p class="support-text">
+                {{ form.password_n.label }}
+                {{ form.password_n(size=30) }} <br>
+                {% for error in form.password_n.errors %}
+                <span style="color: red;font-size: small;">{{ error }}</span>
+                {% endfor %}
+            </p>
+            <br>
+            <p>{{ form.submit() }}</p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+
+            <br><br><br>
+        </form>
+    </body>
+</html>

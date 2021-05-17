@@ -22,6 +22,20 @@
     <!-- Our script file -->
     <script type="text/javascript" src="{{ url_for('static', filename='constellation.js') }}"></script>
 
+    <!-- Prefetch hover images for a better user experience-->
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_TAU_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_CMA_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_ORI_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_PUP_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_VEL_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_CAR_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_SCO_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_SGR_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_LUP_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_CEN_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_CRU_000.png">
+    <link rel="preload" as="image" href="https://in-the-sky.org/images/constellations/con_AQU_000.png">
+
 </head>
 
 <body>
@@ -32,7 +46,8 @@
         {% else %}
         <div class="row">
             <div class="col-sm-12">
-                <span><p class="mini-profile">Hi, {{ current_user.username }}!</p>
+                <p class="mini-profile" style="margin: auto;">Hi, {{ current_user.username }}!</p>
+                <span>
                     <span>
                         <a href="{{ url_for('user', username=current_user.username) }}"><button class="buttons" style="margin-top: 20px;">PROFILE  <span class="glyphicon glyphicon-user"></span></button></a>
                         <a href="/logout"><button class="buttons" style="margin-top: 20px;">LOGOUT  <span class="glyphicon glyphicon-log-out"></span></button></a></span>

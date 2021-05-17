@@ -56,26 +56,26 @@
         <br> <br>
 
 
-        <h1>Register: </h1> <br>
+        <h1>Register </h1> <br>
         <form action="" method="post">
             {{ form.hidden_tag() }}
             <p class="support-text">
                 {{ form.username.label }}
-                {{ form.username(size=30) }}
+                {{ form.username(size=30) }} <br>
                 {% for error in form.username.errors %}
                 <span style="color: red;font-size: small;">{{ error }}</span>
                 {% endfor %}
             </p>
             <p class="support-text">
                 {{ form.password.label }}
-                {{ form.password(size=30) }}
+                {{ form.password(size=30) }} <br>
                 {% for error in form.password.errors %}
                 <span style="color: red;font-size: small;">{{ error }}</span>
                 {% endfor %}
             </p>
             <p class="support-text">
                 {{ form.password2.label }}
-                {{ form.password2(size=30) }}
+                {{ form.password2(size=30) }} <br>
                 {% for error in form.password2.errors %}
                 <span style="color: red;font-size: small;">{{ error }}</span>
                 {% endfor %}
