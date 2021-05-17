@@ -9,16 +9,15 @@ class UserModelCase(unittest.TestCase):
         db.create_all()
         u1 = User(id=0,username='Test')
         u2 = User(id=1,username='Unit')
-        # u3 = User(id=3,username='Unit') #Same username test
         u4 = User(id=2,username='Bob')
         u1.setpw('Hello')
         u2.setpw('World')
         q1 = Question(id=0, constellation='Crux')
-        # u3.setpw('1111')
+        q2 = Question(id=1, constellation='Aquarius')
         db.session.add(u1)
         db.session.add(u2)
-        # db.session.add(u3)
         db.session.add(q1)
+        db.session.add(q2)
         db.session.commit()
 
     def tearDown(self):
@@ -143,7 +142,8 @@ class UserModelCase(unittest.TestCase):
     def test_quiz_correct_answer(self):
         q = Question.query.get('0')
         self.assertEqual(q.constellation, 'Crux')
-
+        q1 = Question.query.get('1')
+        self.assertEqual(q1.constellation, 'Aquarius')
 
     if __name__ == '__main__':
         unittest.main(verbosity=2)
