@@ -125,11 +125,13 @@ def login():
         return redirect(url_for('user', username=current_user.username))
     return render_template('login.html', title='Sign In', form=form)
 
+#logging out current user
 @app.route('/logout')
 def logout():
 	logout_user()
 	return redirect(url_for('index'))
 
+#registering new users
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -143,7 +145,7 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
-
+#profile route
 @app.route('/user/<username>')
 @login_required
 def user(username):
@@ -151,12 +153,14 @@ def user(username):
     user_id = current_user.get_id()
     attempts_list = Score.query.with_entities(Score.attempts).where(Score.user_id == user_id).all()
     scores = []
+    #generating list of attempts
     if attempts_list:
             attempts = max(attempts_list)[0]
             for i in list(range(attempts)):
                 ls = []
                 score = Score.query.filter(and_(Score.user_id==user_id,Score.attempts == i+1)).all()
                 scoret = Score.query.filter(and_(Score.user_id==user_id,Score.score==1,Score.attempts == i+1)).count()
+                #looping through each attempt and generating a score list
                 for x in list(range(len(score))):
                     if str(score[x]) == "<score 0>":
                         ls.append("Q" + str(x + 1) + ": " + '\u274C')
@@ -173,6 +177,7 @@ def user(username):
 def favicon():
     return app.send_static_file('favicon.ico')
 
+#reset password
 @app.route('/reset', methods=['GET', 'POST'])
 @login_required
 def reset():
