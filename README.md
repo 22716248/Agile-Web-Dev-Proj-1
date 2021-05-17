@@ -73,12 +73,7 @@ $ pip3 install -r requirements.txt
 $ flask run
 ```
 
-**Executing testing**  
-```
-$ python3 -m unittest tests
-```
-
-**Viewing databases**  
+**Viewing Databases**  
 ```
 $ python
 >>> from app import db
@@ -86,7 +81,7 @@ $ python
 >>> User.query.all()
 ```
 
-**Running unit Tests**
+**Running Unit Tests**
 ```
 $ python -m unittest tests
 ```
