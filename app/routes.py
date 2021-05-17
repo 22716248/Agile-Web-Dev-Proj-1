@@ -27,7 +27,7 @@ def quiz():
         # All questions hardcoded
 
         #Question 1
-        if quizform.question1.data == "Crux":
+        if (quizform.question1.data).lower() == "crux":
             newScore = Score(user_id=user_id, score=1, question_id=1, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -35,7 +35,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 2
-        if quizform.question2.data == "Australia, New Zealand, Brazil, Papua New Guinea, Samoa":
+        if( quizform.question2.data).lower() == "aquarius":
             newScore = Score(user_id=user_id, score=1, question_id=2, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -43,7 +43,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 3
-        if quizform.question3.data == "Aquarius":
+        if( quizform.question3.data).lower() == "centaurus":
             newScore = Score(user_id=user_id, score=1, question_id=3, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -51,7 +51,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 4
-        if quizform.question4.data == "Orion":
+        if( quizform.question4.data).lower() == "scorpius":
             newScore = Score(user_id=user_id, score=1, question_id=4, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -59,7 +59,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 5
-        if quizform.question5.data == "Centaurus":
+        if( quizform.question5.data).lower() == "sagittarius":
             newScore = Score(user_id=user_id, score=1, question_id=5, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -67,7 +67,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 6
-        if quizform.question6.data == "Lupus":
+        if( quizform.question6.data).lower() == "lupus":
             newScore = Score(user_id=user_id, score=1, question_id=6, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -75,7 +75,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 7
-        if quizform.question7.data == "Sagittarius":
+        if( quizform.question7.data).lower() == "puppis":
             newScore = Score(user_id=user_id, score=1, question_id=7, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -83,7 +83,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 8
-        if quizform.question8.data == "Scorpius":
+        if( quizform.question8.data).lower() == "vela":
             newScore = Score(user_id=user_id, score=1, question_id=8, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -91,7 +91,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 9
-        if quizform.question9.data == "Canis Major":
+        if( quizform.question9.data).lower() == "centaurus":
             newScore = Score(user_id=user_id, score=1, question_id=9, attempts=curr_attempt)
             scores.append(newScore)
         else:
@@ -99,7 +99,7 @@ def quiz():
             scores.append(newScore)
 
         #Question 10
-        if quizform.question10.data == "Alpha Centauri":
+        if (quizform.question10.data).lower() == "orion":
             newScore = Score(user_id=user_id, score=1, question_id=10, attempts=curr_attempt)
             scores.append(newScore)
         else:

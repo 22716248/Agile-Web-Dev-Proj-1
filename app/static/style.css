@@ -64,6 +64,13 @@ h2 {
   font-size: 3em;
   padding: 5%;
 }
+
+h3 {
+  color: lemonchiffon;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  font-size: 2em;
+}
 p {
   color: lightgrey;
   width: 80%;
@@ -120,11 +127,9 @@ input {
 }
 
 .mini-profile {
-  display: inline-block;
-  text-align: left;
-  margin-top: 4px;
   font-size: 25px;
   padding-right: 20px;
+  padding-top: 10px;
   color: lightyellow;
 }
 
@@ -156,8 +161,8 @@ input {
 }
 
 .quiz-question {
-  font-size: 30px;
-  text-align: right;
+  font-size: 25px;
+  margin-left: auto;
   padding: 30px;
 }
 

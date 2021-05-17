@@ -26,10 +26,18 @@
             <a href="/reset"><button class="buttons" style="margin-top: 20px;">Reset Password  <span class="glyphicon glyphicon-log-out"></span></button></a>
         </p>
 
-        <h1 style="margin-top: 100px;"> User: {{ user.username }}</h1>
+        <h1 style="margin-top: 100px;"> User Profile: {{ user.username }}</h1>
         <br>
 
-        <div id="results" style="width:600px;height:300px;margin:auto;"></div>
+        <h2 style="padding-bottom: 20px;">
+            User Graph:
+        </h2>
+        <div id="results" style="width:600px;height:300px;margin:auto;"></div> <br> <br>
+
+        <h2 style="padding-bottom: 10px;">
+            Attempts:
+        </h2> <br>
+
 
         <p> 
             {% set a = [1] %}
@@ -54,8 +62,8 @@
             let scores = [];
             let attempts = [];
             let elements = document.getElementsByClassName("attempt");
-            console.log(elements.length)
 
+            // Hide graph if there are no results
             if (elements.length < 1){
                 $('#results').hide();
             } else {
@@ -65,11 +73,10 @@
             for (var i = 0; i < elements.length; i++) {
                 let attempt = elements[i].innerHTML;
                 words = attempt.split(' ')
-                console.log(words)
                 attempts.push( parseInt( words[17].slice(0, -1) ) )
                 scores.push( parseInt( words[18].slice(0, -4) ) )
-                console.log(attempts, scores)
             }
+
             RESULTS = document.getElementById('results');
             layo = {
                 'layout': {
