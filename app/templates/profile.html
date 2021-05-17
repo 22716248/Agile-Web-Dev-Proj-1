@@ -54,7 +54,8 @@
             {% endfor %}
         
         </p>
-
+        
+        
         <!-- Script for extracting and processing score/attempt data, and drawing a graph-->
         <script>
             let scores = [];
@@ -76,10 +77,38 @@
             }
 
             RESULTS = document.getElementById('results');
+            layo = {
+                'layout': {
+                    paper_bgcolor : "rgba(0,0,0,0)",
+                    title : 'Quiz Results',
+                    plot_bgcolor : "rgba(0,0,0,0)",
+                    font : {
+                        color : '#FFFFFF',
+                        size : 18
+                    },
+                    xaxis : {
+                        title : {
+                            text : 'attempts',
+                            font : {
+                                size : 13
+                            }
+                        }
+                    },
+                    yaxis : {
+                        title : {
+                            text : 'scores',
+                            font : {
+                                size : 13
+                            }
+                        }
+                    }
+                    
+                }
+            }
             Plotly.newPlot( 
             RESULTS, [
             { y: scores, x: attempts }], 
-            { title: 'Quiz Results'});
+            layo.layout);
         </script>
     </body>
 </html>
