@@ -21,7 +21,7 @@
 
         <p style="margin-top: 30px;">
             <a href="/"><button class="buttons">Go back Home  <span class="glyphicon glyphicon-home"></span></button></a>
-            <a href="/quiz"><button class="buttons">Take the Quiz!  <span class="glyphicon glyphicon-paste"></span></button></a>
+            <a href="/quiz"><button id="take-quiz" class="buttons">Take the Quiz!  <span class="glyphicon glyphicon-paste"></span></button></a>
             <a href="/logout"><button class="buttons" style="margin-top: 20px;">Logout  <span class="glyphicon glyphicon-log-out"></span></button></a>
             <a href="/reset"><button class="buttons" style="margin-top: 20px;">Reset Password  <span class="glyphicon glyphicon-lock"></span></button></a>
         </p>
@@ -39,7 +39,7 @@
         </h2> <br>
 
 
-        <p> 
+        <p> <!-- AJAX could be implemented here -->
             {% set a = [1] %}
             {% for s in scores %}
             {% if s.body ==  'Have not attempted the quiz' %}
@@ -48,7 +48,7 @@
                 </p>
             {% else %}
                 <p class="attempt">
-                Attempt {{ a[0] }}: {{ s.body }}</b>
+                Attempt {{ a[0] }}: {{ s.body[0] }} {{ s.body[1] }} {{ s.body[2] }} {{ s.body[3] }} {{ s.body[4] }} {{ s.body[5] }} {{ s.body[6] }} {{ s.body[7] }} {{ s.body[8] }} {{ s.body[9] }} {{ s.body[10] }}</b>
                 </p>
             {% endif %}
             {% if a.append(a.pop() + 1) %}{% endif %}
@@ -74,8 +74,9 @@
             for (var i = 0; i < elements.length; i++) {
                 let attempt = elements[i].innerHTML;
                 words = attempt.split(' ')
+                console.log(words)
                 attempts.push( parseInt( words[17].slice(0, -1) ) )
-                scores.push( parseInt( words[18].slice(0, -4) ) )
+                scores.push( parseInt( words[30].slice(0, -4) ) )
             }
 
             RESULTS = document.getElementById('results');

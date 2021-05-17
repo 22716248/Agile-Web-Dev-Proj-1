@@ -1,11 +1,14 @@
-# Agile-Web-Dev-Proj-1  
+# Constellation Quiz &middot; [![Python 3.9.4](https://img.shields.io/badge/python-3.9.4-blue.svg)](https://www.python.org/downloads/release/python-394/) [![Flask 1.1.2](https://img.shields.io/badge/flask-1.1.2-blue.svg)](https://pypi.org/project/Flask/)  
+Written for [UWA CITS3403 semester 1 2021 project](https://teaching.csse.uwa.edu.au/units/CITS3403/)  
+Constellation quiz is a web app designed to teach people about constellations, made with HTML, CSS, Flask, JQuery, and Bootstrap.  
+
 **Authors:**  
 Adam Chen #22988367 (Adam301c)  
 Geraldine Chin #22972043 (de-ceased)  
 Jakub (Kuba) Wysocki #22716248 (kuba, 22716248)  
 James Van Ravestein #22730755 (j-vanrav, WeeJimmyy)  
 
-# Documentation:  
+# Project Timeline:  
 **14/04 - Initial meeting:**  
 ![20210414_184446](https://user-images.githubusercontent.com/54944385/115646677-3a43c680-a355-11eb-864e-f98daa3cf477.jpg)  
 [In image: Page layout sketch, list of page sections required and quiz ideas. Page sections listed: 1. Intro, 2. Sky overview, 3. Constellation overview, 4. Quiz, 5. Page navigation/progress bar]
@@ -59,6 +62,7 @@ James Van Ravestein #22730755 (j-vanrav, WeeJimmyy)
 * Pre-load images  
 * Password changing functionality  
 
+# Documentation:  
 **Installation**  
 ```
 $ sudo apt install python3
@@ -91,9 +95,7 @@ $ python -m unittest tests
 $ python .\selenium-webdriver-tests.py
 ```
 
-**Possible Libraries:**  
-https://github.com/michalsnik/aos  
-
+# Resources:  
 **Sources:**  
 https://www.thoughtco.com/constellations-pictures-gallery-4122769  
 https://en.wikipedia.org/wiki/Constellation  

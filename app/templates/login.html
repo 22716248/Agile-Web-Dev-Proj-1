@@ -15,7 +15,7 @@
         <!-- Our script file-->
         <script type="text/javascript" src="{{ url_for('static', filename='constellation.js') }}"></script>
 
-        <title> Login Page </title>
+        <title>User Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
@@ -56,7 +56,7 @@
                 {% endwith %}
                 <br> <br> <p>{{ form.submit() }}</p>
             </form>
-            <p class="support-text">New User? <a href="{{ url_for('register') }}"><button class="buttons">Click to Register! ></button></a></p>
+            <p class="support-text">New User? <a href="{{ url_for('register') }}"><button id="register" class="buttons">Click to Register! ></button></a></p>
         </div>
     </body>
 </html>
