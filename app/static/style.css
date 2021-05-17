@@ -252,6 +252,8 @@ input {
   text-align: center;
   padding: 40vh 0%;
 }
+
+/*0 opacity allows sections to fade in with javascript*/
 #section-intro {
   opacity: 0;
 }
