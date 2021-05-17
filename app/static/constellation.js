@@ -36,14 +36,16 @@ function passwordStrengthChecker(password) {
     return passStrength;
 }
 
-let displayed = []
+let displayed = [];
+let currentSection = "none";
+let sectionIds = ['intro', 'crux', 'aquarius', 'orion-canis-major-taurus', 'centaurus-lupus', 'sagittarius-scorpius', 'argo-navis'];
 function fadeIn(sectionId) {
     if (!displayed.includes(sectionId)){
-        var fade = document.getElementById(sectionId);
+        var fade = document.getElementById('section-' + sectionId);
         var opacity = 0;
         var intervalID = setInterval(function() {
             if (opacity < 1) {
-                opacity = opacity + 0.1
+                opacity = opacity + 0.1;
                 fade.style.opacity = opacity;
             } else {
                 clearInterval(intervalID);
@@ -52,14 +54,34 @@ function fadeIn(sectionId) {
         displayed.push(sectionId);
     }
 }
+function updateNav(sectionId) {
+    if (!(sectionId == currentSection)) {
+        currentSection = sectionId;
+        var x;
+        var done = false;
+        for (x in sectionIds) {
+            if (done) {
+                document.getElementById(sectionIds[x] + "-nav").className = "nav-icon";
+            } else {
+                document.getElementById(sectionIds[x] + "-nav").className = "nav-icon-shaded";
+            }
+            if (currentSection == sectionIds[x]) {
+                done = true;
+            }
+        }
+    }
+
+}
+
 $(window).scroll(function() {
     var hT = $('#intro').offset().top,
         hH = $('#intro').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-     console.log((hT-wH) , wS);
+        console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        fadeIn('section-intro')
+        fadeIn('intro');
+        updateNav('intro');
     }
 });
 $(window).scroll(function() {
@@ -69,7 +91,8 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-      fadeIn('section-crux')
+      fadeIn('crux');
+      updateNav('crux');
     }
 });
 $(window).scroll(function() {
@@ -79,7 +102,8 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        fadeIn('section-aquarius')
+        fadeIn('aquarius');
+        updateNav('aquarius');
     }
 });
 $(window).scroll(function() {
@@ -89,7 +113,8 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        fadeIn('section-orion-canis-major-taurus')
+        fadeIn('orion-canis-major-taurus');
+        updateNav('orion-canis-major-taurus');
     }
 });
 $(window).scroll(function() {
@@ -99,7 +124,8 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        fadeIn('section-centaurus-lupus')
+        fadeIn('centaurus-lupus');
+        updateNav('centaurus-lupus');
     }
 });
 $(window).scroll(function() {
@@ -109,7 +135,8 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        fadeIn('section-sagittarius-scorpius')
+        fadeIn('sagittarius-scorpius');
+        updateNav('sagittarius-scorpius');
     }
 });
 $(window).scroll(function() {
@@ -119,6 +146,7 @@ $(window).scroll(function() {
         wS = $(this).scrollTop();
      console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        fadeIn('section-argo-navis')
+        fadeIn('argo-navis');
+        updateNav('argo-navis');
     }
 });
