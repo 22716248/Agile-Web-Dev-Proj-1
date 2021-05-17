@@ -81,9 +81,9 @@ $ python3 -m unittest tests
 **Viewing databases**  
 ```
 $ python
-$ from app import db
-$ from app.models import User, Score
-$ User.query.all()
+>>> from app import db
+>>> from app.models import User, Score
+>>> User.query.all()
 ```
 
 **Running unit Tests**
