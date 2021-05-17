@@ -86,6 +86,15 @@ $ from app.models import User, Score
 $ User.query.all()
 ```
 
+**Running unit Tests**
+```
+python -m unittest tests
+```
+
+**Running Selinium Tests**
+```
+```
+
 **Possible Libraries:**  
 https://github.com/michalsnik/aos  
 
