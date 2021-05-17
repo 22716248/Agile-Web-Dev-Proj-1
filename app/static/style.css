@@ -148,7 +148,7 @@ input {
   align-items: center;
 }
 
-.constellation-text{
+.row{
   margin-top: 5%;
 }
 
@@ -160,7 +160,6 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.6;
-  margin-top: 5%;
 }
 
 .hover-me {
