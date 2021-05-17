@@ -3,6 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, ValidationError, DataRequired, EqualTo
 from app.models import User, Score
 
+
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -31,8 +32,8 @@ class QuizForm(FlaskForm):
     question8 = StringField("Question 8: Which constellation is also known as the sails?", validators=[DataRequired()])
     question9 = StringField("Question 9: Which constellation contains the star system Alpha Centauri?", validators=[DataRequired()])
     question10 = StringField("Question 10: Which constellation depicts a superhuman giant hunter?", validators=[DataRequired()])
-
     submit = SubmitField('Submit Answers.')
+
 class ResetForm(FlaskForm):
     password_o = PasswordField('Old Password',validators=[DataRequired()])
     password_n = PasswordField('New Password',validators=[DataRequired()])
