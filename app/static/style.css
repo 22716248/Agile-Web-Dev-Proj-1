@@ -16,7 +16,6 @@ html {
   font-size: 1.2em;
 }
 .nav-button img {
-  filter: invert(100%);
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -25,7 +24,10 @@ html {
 .nav-button img:hover {
   transform: scale(3)
 }
-.nav-button-shaded {
+.nav-icon {
+  filter: invert(100%);
+}
+.nav-icon-shaded {
   filter: invert(70%);
 }
 
