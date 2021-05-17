@@ -2,7 +2,7 @@ from typing import NewType
 from flask.globals import session
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, QuizForm, RegistrationForm
+from app.forms import LoginForm, QuizForm, RegistrationForm, ResetForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import Question, User, Score
 from werkzeug.urls import url_parse
@@ -166,3 +166,17 @@ def user(username):
 @app.route('/favicon.ico')
 def favicon():
     return app.send_static_file('favicon.ico')
+
+@app.route('/reset', methods=['GET', 'POST'])
+@login_required
+def reset():
+    user = current_user
+    form = ResetForm()
+    if form.validate_on_submit():
+        if not user.checkpw(form.password_o.data):
+            flash("Password Incorrect")
+            return redirect(url_for('reset'))
+        user.setpw(form.password_n.data)
+        db.session.commit()
+        return redirect(url_for('user', username=current_user.username))
+    return render_template('reset.html', title= 'Reset Password', form=form)

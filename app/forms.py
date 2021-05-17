@@ -31,6 +31,9 @@ class QuizForm(FlaskForm):
     question8 = StringField("Question 8: Which constellation is regonised as the leaning coconut tree in oceanic cultures?", validators=[DataRequired()])
     question9 = StringField("Question 9: Which constellation represents one of the larger dogs of Orion?", validators=[DataRequired()])
     question10 = StringField("Question 10: What star system is closest to our sun?", validators=[DataRequired()])
-
     submit = SubmitField('Submit Answers.')
+class ResetForm(FlaskForm):
+    password_o = PasswordField('Old Password',validators=[DataRequired()])
+    password_n = PasswordField('New Password',validators=[DataRequired()])
+    submit = SubmitField('Change Password')
 
