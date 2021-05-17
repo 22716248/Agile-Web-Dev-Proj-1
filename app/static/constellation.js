@@ -36,9 +36,12 @@ function passwordStrengthChecker(password) {
     return passStrength;
 }
 
+
+//NAVIGATION ICONS AND FADE-INS
 let displayed = [];
 let currentSection = "none";
 let sectionIds = ['intro', 'crux', 'aquarius', 'orion-canis-major-taurus', 'centaurus-lupus', 'sagittarius-scorpius', 'argo-navis'];
+//Fade in content once per section.
 function fadeIn(sectionId) {
     if (!displayed.includes(sectionId)){
         var fade = document.getElementById('section-' + sectionId);
@@ -54,6 +57,7 @@ function fadeIn(sectionId) {
         displayed.push(sectionId);
     }
 }
+//Update the the navigation icons to indicate where the user is on the page.
 function updateNav(sectionId) {
     if (!(sectionId == currentSection)) {
         currentSection = sectionId;
@@ -73,6 +77,7 @@ function updateNav(sectionId) {
 
 }
 
+//listeners for scrolling each section. Fades in the content and updates the nav bar.
 $(window).scroll(function() {
     var hT = $('#intro').offset().top,
         hH = $('#intro').outerHeight(),
