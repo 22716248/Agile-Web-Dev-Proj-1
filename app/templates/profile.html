@@ -21,7 +21,7 @@
 
         <p style="margin-top: 30px;">
             <a href="/"><button class="buttons">Go back Home  <span class="glyphicon glyphicon-home"></span></button></a>
-            <a href="/quiz"><button class="buttons">Take the Quiz!  <span class="glyphicon glyphicon-paste"></span></button></a>
+            <a href="/quiz"><button id="take-quiz" class="buttons">Take the Quiz!  <span class="glyphicon glyphicon-paste"></span></button></a>
             <a href="/logout"><button class="buttons" style="margin-top: 20px;">Logout  <span class="glyphicon glyphicon-log-out"></span></button></a>
             <a href="/reset"><button class="buttons" style="margin-top: 20px;">Reset Password  <span class="glyphicon glyphicon-lock"></span></button></a>
         </p>
@@ -39,7 +39,7 @@
         </h2> <br>
 
 
-        <p> 
+        <p> <!-- AJAX could be implemented here -->
             {% set a = [1] %}
             {% for s in scores %}
             {% if s.body ==  'Have not attempted the quiz' %}
