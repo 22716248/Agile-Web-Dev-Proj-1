@@ -88,11 +88,12 @@ $ User.query.all()
 
 **Running unit Tests**
 ```
-python -m unittest tests
+$ python -m unittest tests
 ```
 
 **Running Selinium Tests**
 ```
+$ python .\selenium-webdriver-tests.py
 ```
 
 **Possible Libraries:**  
