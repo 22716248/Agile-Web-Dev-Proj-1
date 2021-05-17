@@ -155,7 +155,7 @@ input {
 
 .quiz-question {
   font-size: 30px;
-  text-align: right;
+  margin: auto;
   padding: 30px;
 }
 

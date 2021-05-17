@@ -42,6 +42,11 @@
             <form action="" method="post" novalidate>
                     {{ quizform.hidden_tag() }}
 
+                    <br>
+                    <h3> Constelattion Identification Questions</h3>
+                    <br>
+
+                    <img src="https://in-the-sky.org/images/constellations/con_CRU_001.png" alt="Question1">
                     <p class="quiz-question">
                         {{ quizform.question1.label }}
                         {{ quizform.question1(size=32) }} <br>
@@ -50,6 +55,7 @@
                         {% endfor %}
                     </p>
 
+                    <img src="https://in-the-sky.org/images/constellations/con_AQR_001.png" alt="Question1">
                     <p class="quiz-question">
                         {{ quizform.question2.label }}
                         {{ quizform.question2(size=32) }} <br>
@@ -58,6 +64,7 @@
                         {% endfor %}
                     </p>
 
+                    <img src="https://in-the-sky.org/images/constellations/con_SCO_001.png" alt="Question1">
                     <p class="quiz-question">
                         {{ quizform.question3.label }}
                         {{ quizform.question3(size=32) }} <br>
@@ -66,6 +73,7 @@
                         {% endfor %}
                     </p>
 
+                    <img src="https://in-the-sky.org/images/constellations/con_SGR_001.png" alt="Question1">
                     <p class="quiz-question">
                         {{ quizform.question4.label }}
                         {{ quizform.question4(size=32) }} <br>
@@ -74,6 +82,7 @@
                         {% endfor %}
                     </p>
 
+                    <img src="https://in-the-sky.org/images/constellations/con_CEN_001.png" alt="Question1">
                     <p class="quiz-question">
                         {{ quizform.question5.label }}
                         {{ quizform.question5(size=32) }} <br>
@@ -81,6 +90,10 @@
                         <span style="color: yellow;font-size: 25px;">{{ error }}</span>
                         {% endfor %}
                     </p>
+
+                    <br>
+                    <h3> Constelattion Theory Questions</h3>
+                    <br>
 
                     <p class="quiz-question">
                         {{ quizform.question6.label }}
