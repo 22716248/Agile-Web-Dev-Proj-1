@@ -21,8 +21,8 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Please use a different username.')
 
 class QuizForm(FlaskForm):
-    question1 = StringField("Question 1: What constellation is the smallest of the 88 Modern constellations?", validators=[DataRequired()])
-    question2 = StringField("Question 2: On the flags of which countries can you find the Crux constellation?", validators=[DataRequired()])
+    question1 = StringField("Question 1: For the above image, identify the constellation.", validators=[DataRequired()])
+    question2 = StringField("Question 2: For the above image, identify the constellation.", validators=[DataRequired()])
     question3 = StringField("Question 3: Which constellation represents the god Ea in the ancient Babylonian culture?", validators=[DataRequired()])
     question4 = StringField("Question 4: Which constellation depicts a superhuman giant hunter?", validators=[DataRequired()])
     question5 = StringField("Question 5: Which constellation contains the star system Alpha Centauri?", validators=[DataRequired()])
